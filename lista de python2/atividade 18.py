@@ -11,6 +11,8 @@ for i in range(1, n+1):
 for i in numero:
   multi *= i
 
+numero.reverse()
+
 print(f"""
 - O fatorial da lista: {numero}
 - será de: {multi}""")

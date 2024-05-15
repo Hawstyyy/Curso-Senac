@@ -5,10 +5,10 @@
 n = int(input("Insira até que termo gostaria de ver: "))
 fibonacci1 = 0
 fibonacci2 = 1
-fibonacci3 = 0
+fibonacci3 = 1
 
 while fibonacci3 <= n:
-    print(f"{fibonacci3}")
+    print(f"{fibonacci3}", end=", ")
 
     fibonacci3 = fibonacci1 + fibonacci2
     fibonacci1 = fibonacci2

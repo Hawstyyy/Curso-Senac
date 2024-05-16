@@ -1,4 +1,6 @@
-# ✔ Curso Profissionalizante do senac ✔
+<h1 align="center">
+  ✔ Curso Profissionalizante do Senac ✔
+</h1>
 <p align="center">
   <img src="https://liveondemand.com.br/wp-content/uploads/2019/05/logo-SENAC.png" alt="Logo do projeto"/>
 </p>

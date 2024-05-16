@@ -9,7 +9,7 @@
   <img src="https://badgen.net/github/last-commit/Hawstyyy/Curso-Senac" alt="Github Last Commit"/>
 </p>
 
-## 🔥 Descrição do curso:[^1]
+## - 📝 Descrição do curso:[^1]
 > **Objetivo geral:**
 > 
 >Formar profissionais com competências para atuar e intervir em seu campo de trabalho, com foco em resultados.

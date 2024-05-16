@@ -23,4 +23,5 @@
 
 ## 📦 Oque usamos (até momento da escrita):
 - Python
+- Visual Studio Code
 - Github

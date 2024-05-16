@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="https://badgen.net/github/last-commit/Hawstyyy/Curso-Senac" alt="Github Last Commit"/>
+  <img src="https://badgen.net/github/last-commit/hawstyyy/curso-senac" alt="Github Last Commit"/>
 </p>
 
 ## 📝 Descrição do curso:[^1]

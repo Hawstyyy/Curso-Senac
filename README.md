@@ -1,6 +1,7 @@
 <h1 align="center">
   ✔ Curso Profissionalizante do Senac ✔
 </h1>
+
 <p align="center">
   <img src="https://liveondemand.com.br/wp-content/uploads/2019/05/logo-SENAC.png" alt="Logo do projeto"/>
 </p>
@@ -9,7 +10,7 @@
   <img src="https://badgen.net/github/last-commit/Hawstyyy/Curso-Senac" alt="Github Last Commit"/>
 </p>
 
-## - 📝 Descrição do curso:[^1]
+## 📝 Descrição do curso:[^1]
 > **Objetivo geral:**
 > 
 >Formar profissionais com competências para atuar e intervir em seu campo de trabalho, com foco em resultados.

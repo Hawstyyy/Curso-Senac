@@ -6,9 +6,7 @@
   <img src="https://liveondemand.com.br/wp-content/uploads/2019/05/logo-SENAC.png" alt="Logo do projeto"/>
 </p>
 
-<p align="center">
-  <img src="https://badgen.net/github/last-commit/hawstyyy/curso-senac" alt="Github Last Commit"/>
-</p>
+![Logo do projeto](https://badgen.net/github/last-commit/hawstyyy/curso-senac)
 
 ## 📝 Descrição do curso:[^1]
 > **Objetivo geral:**

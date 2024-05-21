@@ -163,22 +163,23 @@ if ator == "C" or ator == "c":
     if op == "Dinheiro":
       nota = float(input("- Qual o valor fornecido? "))
       if nota < preco:
-        print("\n-!!!!!!!!!!!!!!!!!!!!! Dinheiro insuficiente !!!!!!!!!!!!!!!!!!!!!-")
+        print("\n-!!!!!!!!!!!!!!!!!!!!! Dinheiro insuficiente !!!!!!!!!!!!!!!!!!!!!-\n")
       else:
         troco = nota - preco
         print(f"- O troco deve ser de: R${troco}")
-        print("\n-!!!!!!!!!!!!!!!!!!!!! Pagamento realizado com sucesso !!!!!!!!!!!!!!!!!!!!!-")
+        print("\n-!!!!!!!!!!!!!!!!!!!!! Pagamento realizado com sucesso !!!!!!!!!!!!!!!!!!!!!-\n")
         break
     
     if op == "Pix":
       print("- Realize o pix: \"mvMQK5a&;W(AR4y?KVHURsLUVLiTk&Cg=Sn((R6q#gcJukm)Bc\"")
-      print("\n-!!!!!!!!!!!!!!!!!!!!! Pagamento realizado com sucesso !!!!!!!!!!!!!!!!!!!!!-")
+      print("\n-!!!!!!!!!!!!!!!!!!!!! Pagamento realizado com sucesso !!!!!!!!!!!!!!!!!!!!!-\n")
       break
     
-    if op == "Cartão":
+    if op == "Cartão" or "Cartao":
       tipocartao = input("\n- Crédito, Débito ou Voucher?").capitalize
       saldo = float(input("\n- Insira o saldo do cartão: "))
       if saldo < preco:
-        print("\n-!!!!!!!!!!!!!!!!!!!!! Saldo Insuficiente !!!!!!!!!!!!!!!!!!!!!-")
+        print("\n-!!!!!!!!!!!!!!!!!!!!! Saldo Insuficiente !!!!!!!!!!!!!!!!!!!!!-\n")
       else:
-        print("\n-!!!!!!!!!!!!!!!!!!!!! Pagamento realizado com sucesso !!!!!!!!!!!!!!!!!!!!!-")
+        print("\n-!!!!!!!!!!!!!!!!!!!!! Pagamento realizado com sucesso !!!!!!!!!!!!!!!!!!!!!-\n")
+        break

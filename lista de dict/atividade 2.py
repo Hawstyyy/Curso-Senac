@@ -1,20 +1,37 @@
 #  Crie um dicionário com nomes de alunos e suas notas. Calcule a média das
 # notas e exiba o resultado
 
-alunos = {('Ana', 6.5,7.0,8.0), ('Júlia', 5.0,6.0,5.0)}
+alunos = {'Ana': [6.5,7.0,8.0], 'Júlia': [5.0,6.0,5.0]}
 
-print("""
+while True:
+  print("""
 +-------------------- Alunos cadastrados --------------------+""")
-for i in alunos:
-  print(f"| {i[0]} - Notas: {i[1]}, {i[2]}, {i[3]}")
-print("+------------------------------------------------------------+")
+  for key,value in alunos.items():
+    print(f"| {key} - Notas: {value[0]}, {value[1]}, {value[2]}")
+  print("+------------------------------------------------------------+")
 
-select = input("\n- Qual aluno gostaria dever a média? ").capitalize()
-for i in alunos:
-  if select in i:
-    media = (i[1] + i[2] + i[3])/3
+  select = input("\n- Qual aluno gostaria dever a média? ").capitalize()
 
-    if media >= 6:
-      print(f"\n- O aluno(a) {i[0]}, tem a média de {round(media,2)} e está aprovado(a)")
+  if select not in alunos:
+    select_add = input("\n- Esse aluno não existe, gostaria de adicionar? (S/N): ").capitalize()
+
+    if select_add == "S":
+      notas = {}
+      nome = select
+      nota = input("- Insira as notas do aluno dividos por uma vírgula: ").split(",")
+      notas = [float(nota[0]), float(nota[1]), float(nota[2])]
+      alunos.update({nome:notas})
+      print("\n-! Aluno adicionado !-")
+
     else:
-      print(f"\n- O aluno(a) {i[0]}, tem a média de {round(media,2)} e está de recuperação")
+      continue
+
+  else:
+    for key,value in alunos.items():
+      if select in key:
+        media = (value[0] + value[1] + value[2])/3
+
+        if media >= 6:
+          print(f"\n- O aluno(a) {key}, tem a média de {round(media,2)} e está aprovado(a)")
+        else:
+          print(f"\n- O aluno(a) {key}, tem a média de {round(media,2)} e está de recuperação")

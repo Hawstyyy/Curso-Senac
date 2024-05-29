@@ -20,7 +20,9 @@ dict = {'mother':'mãe',
 while True:
   select = input("\n- Insira a sua palavra em inglês ou x para sair: ")
 
-  for key, value in dict.items():
-    if select in key:
-      print(f"\nA palavra {key}, tem a tradução de: {value}")
-      break
+  if select not in dict:
+    print("\nA palvra inserida não existe!")
+  else:
+    for key, value in dict.items():
+      if select in key:
+        print(f"\nA palavra {key}, tem a tradução de: {value}")

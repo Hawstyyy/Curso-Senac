@@ -14,4 +14,3 @@ for caracter in texto:
 
 for i in caracteres:
   print(f"| {i} - apareceu o total de: {caracteres[i]}")
-  

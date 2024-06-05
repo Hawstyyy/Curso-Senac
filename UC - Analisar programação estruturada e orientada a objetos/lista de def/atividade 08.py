@@ -5,18 +5,17 @@
 
 import random
 
-def rolagem():
-  return random.choice(range(1,7))
-
 def dado(n):
   dado = {1:0, 2:0, 3:0, 4:0, 5:0, 6:0}
   stat = {}
 
   for i in range(n):
-    dado[rolagem()] += 1
-  
+    choice,value = random.choice(list(dado.items()))
+    if choice in dado:
+      dado[choice] += 1
+
   for key,value in dado.items():
-    stat[key] = (value*100) / n
+    stat[key] = ((value/n) * 100)
 
   print(f"- A rolagem de cada número foi: ")
   for key, value in dado.items():

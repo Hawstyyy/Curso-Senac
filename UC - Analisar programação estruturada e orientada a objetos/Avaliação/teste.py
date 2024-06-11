@@ -2,6 +2,26 @@ from Especie import Especie
 
 banco_de_dados = {}
 
+def print_master(animal):
+    print(f"""
+- Tipo celular: {animal.tipo_celular}
+- Nutrição: {animal.nutricao}
+- Nome do filo: {animal.nome_filo}
+- Reprodução: {animal.reproducao}
+- Hábito de sono: {animal.sono_hab}
+- Locomoção: {animal.locomocao}
+- Nome da ordem: {animal.nome_ordem}
+- Características da ordem: {animal.caracterisca_ordem}
+- Nome da Família: {animal.nome_familia}
+- Características da família: {animal.caracteristica_familia}
+- Nome do gênero: {animal.nome_genero}
+- Característica do gênero: {animal.caracterisca_genero}
+- Tamanho Corporal: {animal.tamanho_corporal}""")
+    if animal.tipo_camuflagem == 'Ausente':
+        pass
+    else:
+        print(f"- Tipo de Camuflagem: {animal.tipo_camuflagem}")
+
 banco_de_dados['Leão'] = Especie(
     tipo_celular='Eucariontes',
     nutricao='Carnívoro',
@@ -427,17 +447,25 @@ banco_de_dados['Ornitorrinco'] = Especie(
     tipo_camuflagem='Pele marrom e densa'
 )
 
-print("\n----- Banco de dados -----")
 while True:
-  i = 0
+  print("\n------- Banco de dados -------")
+  i = 1
 
   for key,value in banco_de_dados.items():
-    print(f"-({i+1}) - {key}")
+    print(f"-({i}) - {key}")
     i += 1
   
-  escolha = int(input("\n- Escolha o número associado ao animal que deseja: "))
+  escolha = int(input("\n- Escolha o animal que deseja, pelo número associado! "))
 
-  if escolha > len(banco_de_dados) or escolha < len(banco_de_dados):
-    print("\n- Esse animal não está presente no nosso banco de dados!\n")
+  if escolha > len(banco_de_dados) or escolha <= 0:
+    print("\n-!!!!!!!!!!!!!!!! Esse animal não está presente no nosso banco de dados! !!!!!!!!!!!!!!!!-")
+
   else:
-    print
+    i = 1
+    for key,value in banco_de_dados.items():
+        if i == escolha:
+            print(f"-------Informações do animal: {key}--------")
+            print_master(value)
+            break
+        else:
+            i += 1

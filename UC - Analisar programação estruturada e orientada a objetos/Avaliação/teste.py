@@ -448,24 +448,25 @@ banco_de_dados['Ornitorrinco'] = Especie(
 )
 
 while True:
-  print("\n------- Banco de dados -------")
+  print("\n---------------------- Nosso banco de dados! ----------------------\n")
   i = 1
 
   for key,value in banco_de_dados.items():
-    print(f"-({i}) - {key}")
+    print(f"({i}) - {key}")
     i += 1
   
-  escolha = int(input("\n- Escolha o animal que deseja, pelo número associado! "))
+  escolha = int(input("\n\n- Escolha o animal que deseja, pelo número associado! "))
 
   if escolha > len(banco_de_dados) or escolha <= 0:
-    print("\n-!!!!!!!!!!!!!!!! Esse animal não está presente no nosso banco de dados! !!!!!!!!!!!!!!!!-")
+    print("\n\n-!!!!!!!!!!!!!!!! Esse animal não está presente no nosso banco de dados e/ou é um número inválido !!!!!!!!!!!!!!!!-\n")
 
   else:
     i = 1
     for key,value in banco_de_dados.items():
         if i == escolha:
-            print(f"-------Informações do animal: {key}--------")
+            print(f"\n\n---------------------- Apresentando informações do(a) {key} ----------------------\n")
             print_master(value)
+            print()
             break
         else:
             i += 1

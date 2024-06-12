@@ -252,3 +252,19 @@ preco=45000.00
     }
 print(len(banco_de_dados))
 print_master(banco_de_dados["Ducati Monster 821"])
+
+
+
+
+
+
+
+# menor_valor = None
+# for nome, veiculo in banco_de_dados.items():
+#     if menor_valor == None:
+#         menor_valor = veiculo
+    
+#     if veiculo.preco < menor_valor.preco:
+#         menor_valor = veiculo
+
+# print(menor_valor.nome, menor_valor.preco) guardando pra mais tarde pra filtrar e tal

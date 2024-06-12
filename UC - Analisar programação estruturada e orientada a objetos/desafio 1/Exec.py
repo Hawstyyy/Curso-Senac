@@ -1,7 +1,5 @@
 from Especie import Especie
 
-banco_de_dados = {}
-
 def print_master(animal):
     print(f"""
 - Tipo celular: {animal.tipo_celular}
@@ -22,7 +20,9 @@ def print_master(animal):
     else:
         print(f"- Tipo de Camuflagem: {animal.tipo_camuflagem}")
 
-banco_de_dados['Leão'] = Especie(
+banco_de_dados = {
+
+'Leão':Especie(
     tipo_celular='Eucariontes',
     nutricao='Carnívoro',
     nome_filo='Chordata',
@@ -37,9 +37,9 @@ banco_de_dados['Leão'] = Especie(
     caracterisca_genero='Grandes felinos sociais',
     tamanho_corporal='Grande',
     tipo_camuflagem='Coloração amarela'
-)
+),
 
-banco_de_dados['Elefante'] = Especie(
+'Elefante':Especie(
     tipo_celular='Eucariontes',
     nutricao='Herbívoro',
     nome_filo='Chordata',
@@ -54,9 +54,9 @@ banco_de_dados['Elefante'] = Especie(
     caracterisca_genero='Mamíferos terrestres de grande porte',
     tamanho_corporal='Grande',
     tipo_camuflagem='Ausente'
-)
+),
 
-banco_de_dados['Golfinho'] = Especie(
+'Golfinho':Especie(
     tipo_celular='Eucariontes',
     nutricao='Carnívoro',
     nome_filo='Chordata',
@@ -71,9 +71,9 @@ banco_de_dados['Golfinho'] = Especie(
     caracterisca_genero='Mamíferos marinhos inteligentes',
     tamanho_corporal='Grande',
     tipo_camuflagem='Ausente'
-)
+),
 
-banco_de_dados['Aguia'] = Especie(
+'Aguia':Especie(
     tipo_celular='Eucariontes',
     nutricao='Carnívoro',
     nome_filo='Chordata',
@@ -88,9 +88,9 @@ banco_de_dados['Aguia'] = Especie(
     caracterisca_genero='Aves de rapina com visão aguçada',
     tamanho_corporal='Médio',
     tipo_camuflagem='Plumagem camuflada'
-)
+),
 
-banco_de_dados['Cobra'] = Especie(
+'Cobra':Especie(
     tipo_celular='Eucariontes',
     nutricao='Carnívoro',
     nome_filo='Chordata',
@@ -105,9 +105,9 @@ banco_de_dados['Cobra'] = Especie(
     caracterisca_genero='Geralmente venenosa',
     tamanho_corporal='Pequeno',
     tipo_camuflagem='Padrão de cores crípticas'
-)
+),
 
-banco_de_dados['Onça Pintada'] = Especie(
+'Onça Pintada':Especie(
     tipo_celular='Eucariontes',
     nutricao='Carnívoro',
     nome_filo='Chordata',
@@ -122,9 +122,9 @@ banco_de_dados['Onça Pintada'] = Especie(
     caracterisca_genero='Grandes felinos manchados',
     tamanho_corporal='Grande',
     tipo_camuflagem='Manchas em roseta'
-)
+),
 
-banco_de_dados['Tigre'] = Especie(
+'Tigre':Especie(
     tipo_celular='Eucariontes',
     nutricao='Carnívoro',
     nome_filo='Chordata',
@@ -139,9 +139,9 @@ banco_de_dados['Tigre'] = Especie(
     caracterisca_genero='Grandes felinos solitários e poderosos',
     tamanho_corporal='Grande',
     tipo_camuflagem='Listras verticais'
-)
+),
 
-banco_de_dados['Baleia Azul'] = Especie(
+'Baleia Azul':Especie(
     tipo_celular='Eucariontes',
     nutricao='Carnívoro',
     nome_filo='Chordata',
@@ -156,9 +156,9 @@ banco_de_dados['Baleia Azul'] = Especie(
     caracterisca_genero='Maiores mamíferos marinhos',
     tamanho_corporal='Enorme',
     tipo_camuflagem='Ausente'
-)
+),
 
-banco_de_dados['Chimpanze'] = Especie(
+'Chimpanze':Especie(
     tipo_celular='Eucariontes',
     nutricao='Omnívoro',
     nome_filo='Chordata',
@@ -173,9 +173,9 @@ banco_de_dados['Chimpanze'] = Especie(
     caracterisca_genero='Primatas inteligentes e sociais',
     tamanho_corporal='Médio',
     tipo_camuflagem='Ausente'
-)
+),
 
-banco_de_dados['Aguia Calva'] = Especie(
+'Aguia Calva':Especie(
     tipo_celular='Eucariontes',
     nutricao='Carnívoro',
     nome_filo='Chordata',
@@ -190,9 +190,9 @@ banco_de_dados['Aguia Calva'] = Especie(
     caracterisca_genero='Aves de rapina com plumagem distintiva',
     tamanho_corporal='Grande',
     tipo_camuflagem='Plumagem branca na cabeça'
-)
+),
 
-banco_de_dados['Tucano'] = Especie(
+'Tucano':Especie(
     tipo_celular='Eucariontes',
     nutricao='Omnívoro',
     nome_filo='Chordata',
@@ -207,9 +207,9 @@ banco_de_dados['Tucano'] = Especie(
     caracterisca_genero='Aves com bico colorido',
     tamanho_corporal='Pequeno',
     tipo_camuflagem='Cores vibrantes'
-)
+),
 
-banco_de_dados['Tubarão Branco'] = Especie(
+'Tubarão Branco':Especie(
     tipo_celular='Eucariontes',
     nutricao='Carnívoro',
     nome_filo='Chordata',
@@ -224,9 +224,9 @@ banco_de_dados['Tubarão Branco'] = Especie(
     caracterisca_genero='Predadores marinhos temidos',
     tamanho_corporal='Grande',
     tipo_camuflagem='Ausente'
-)
+),
 
-banco_de_dados['Orangotango'] = Especie(
+'Orangotango':Especie(
     tipo_celular='Eucariontes',
     nutricao='Frugívoro',
     nome_filo='Chordata',
@@ -241,9 +241,9 @@ banco_de_dados['Orangotango'] = Especie(
     caracterisca_genero='Primatas arborícolas da Indonésia',
     tamanho_corporal='Grande',
     tipo_camuflagem='Ausente'
-)
+),
 
-banco_de_dados['Lobo'] = Especie(
+'Lobo':Especie(
     tipo_celular='Eucariontes',
     nutricao='Carnívoro',
     nome_filo='Chordata',
@@ -258,9 +258,9 @@ banco_de_dados['Lobo'] = Especie(
     caracterisca_genero='Canídeos sociais e caçadores habilidosos',
     tamanho_corporal='Médio',
     tipo_camuflagem='Cinza com manchas'
-)
+),
 
-banco_de_dados['Girafa'] = Especie(
+'Girafa':Especie(
     tipo_celular='Eucariontes',
     nutricao='Herbívoro',
     nome_filo='Chordata',
@@ -275,9 +275,9 @@ banco_de_dados['Girafa'] = Especie(
     caracterisca_genero='Mamíferos com pescoço longo',
     tamanho_corporal='Grande',
     tipo_camuflagem='Manchas irregulares'
-)
+),
 
-banco_de_dados['Gorila'] = Especie(
+'Gorila':Especie(
     tipo_celular='Eucariontes',
     nutricao='Herbívoro',
     nome_filo='Chordata',
@@ -292,9 +292,9 @@ banco_de_dados['Gorila'] = Especie(
     caracterisca_genero='Grandes primatas herbívoros',
     tamanho_corporal='Grande',
     tipo_camuflagem='Ausente'
-)
+),
 
-banco_de_dados['Tartaruga Verde'] = Especie(
+'Tartaruga Verde':Especie(
     tipo_celular='Eucariontes',
     nutricao='Herbívoro',
     nome_filo='Chordata',
@@ -309,9 +309,9 @@ banco_de_dados['Tartaruga Verde'] = Especie(
     caracterisca_genero='Répteis marinhos ameaçados de extinção',
     tamanho_corporal='Grande',
     tipo_camuflagem='Carapaça esverdeada'
-)
+),
 
-banco_de_dados['Lince'] = Especie(
+'Lince':Especie(
     tipo_celular='Eucariontes',
     nutricao='Carnívoro',
     nome_filo='Chordata',
@@ -326,9 +326,9 @@ banco_de_dados['Lince'] = Especie(
     caracterisca_genero='Felinos ágeis e excelentes caçadores',
     tamanho_corporal='Médio',
     tipo_camuflagem='Manchas pontilhadas'
-)
+),
 
-banco_de_dados['Pinguim Imperador'] = Especie(
+'Pinguim Imperador':Especie(
     tipo_celular='Eucariontes',
     nutricao='Carnívoro',
     nome_filo='Chordata',
@@ -343,9 +343,9 @@ banco_de_dados['Pinguim Imperador'] = Especie(
     caracterisca_genero='Grandes pinguins antárticos',
     tamanho_corporal='Grande',
     tipo_camuflagem='Plumagem preta e branca'
-)
+),
 
-banco_de_dados['Rinoceronte'] = Especie(
+'Rinoceronte':Especie(
     tipo_celular='Eucariontes',
     nutricao='Herbívoro',
     nome_filo='Chordata',
@@ -360,9 +360,9 @@ banco_de_dados['Rinoceronte'] = Especie(
     caracterisca_genero='Mamíferos herbívoros com chifres distintivos',
     tamanho_corporal='Grande',
     tipo_camuflagem='Cinza com rugas'
-)
+),
 
-banco_de_dados['Hipopotamo'] = Especie(
+'Hipopotamo':Especie(
     tipo_celular='Eucariontes',
     nutricao='Herbívoro',
     nome_filo='Chordata',
@@ -377,9 +377,9 @@ banco_de_dados['Hipopotamo'] = Especie(
     caracterisca_genero='Gigantes herbívoros semi-aquáticos',
     tamanho_corporal='Grande',
     tipo_camuflagem='Ausente'
-)
+),
 
-banco_de_dados['Puma'] = Especie(
+'Puma':Especie(
     tipo_celular='Eucariontes',
     nutricao='Carnívoro',
     nome_filo='Chordata',
@@ -394,9 +394,9 @@ banco_de_dados['Puma'] = Especie(
     caracterisca_genero='Felinos solitários e ágeis',
     tamanho_corporal='Médio',
     tipo_camuflagem='Cor uniforme'
-)
+),
 
-banco_de_dados['Suricato'] = Especie(
+'Suricato':Especie(
     tipo_celular='Eucariontes',
     nutricao='Omnívoro',
     nome_filo='Chordata',
@@ -411,9 +411,9 @@ banco_de_dados['Suricato'] = Especie(
     caracterisca_genero='Pequenos mamíferos sociais e vigilantes',
     tamanho_corporal='Pequeno',
     tipo_camuflagem='Ausente'
-)
+),
 
-banco_de_dados['Quati'] = Especie(
+'Quati':Especie(
     tipo_celular='Eucariontes',
     nutricao='Omnívoro',
     nome_filo='Chordata',
@@ -428,9 +428,9 @@ banco_de_dados['Quati'] = Especie(
     caracterisca_genero='Parentes dos guaxinins, geralmente encontrados em grupos',
     tamanho_corporal='Médio',
     tipo_camuflagem='Rabo listrado'
-)
+),
 
-banco_de_dados['Ornitorrinco'] = Especie(
+'Ornitorrinco':Especie(
     tipo_celular='Eucariontes',
     nutricao='Carnívoro e herbívoro',
     nome_filo='Chordata',
@@ -446,7 +446,7 @@ banco_de_dados['Ornitorrinco'] = Especie(
     tamanho_corporal='Pequeno',
     tipo_camuflagem='Pele marrom e densa'
 )
-
+}
 while True:
   print("\n---------------------- Nosso banco de dados! ----------------------\n")
   i = 1

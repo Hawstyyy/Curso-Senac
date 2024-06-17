@@ -2,61 +2,64 @@ from Habilitação import Habilitacao
 
 def print_master(veiculo):
     print(f"""
-- Nome do veículo: {veiculo.nome}
-- Tração: {veiculo.tracao}
-- Habilitação necessária: {veiculo.tipo()}
-- Tipo de motor: {veiculo.tipo_motor}""")
-    if veiculo.tipo_veiculo == "Carro" or veiculo.tipo_veiculo == "Caminhonete":
-        print(f"- Carroceria: {veiculo.carroceria}")
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+| Nome do veículo - {veiculo.nome}
+| Quantia de pessoas suportada no veículo - {veiculo.quant_pessoa} pessoas
+| Veículo de {veiculo.tracao} trações
+| Habilitação necessária - {veiculo.tipo()}
+| Tipo de motor - {veiculo.tipo_motor}
+| Carroceria - {veiculo.carroceria}
+| Preço do veículo - R${veiculo.preco}
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -""")
 
 banco_de_dados = {
 
-"Ford Focus": Habilitacao(
-nome="Ford Focus",
-tracao=2,
-quantidade_rodas=4,
-quant_pessoa=5,
-carroceria="Sedan",
-tipo_motor="Combustão",
-tipo_veiculo="Carro",
-peso=1400,
-preco=75000.00
-),
-
-"Toyota Corolla": Habilitacao(
-nome="Toyota Corolla",
-tracao=2,
-quantidade_rodas=4,
-quant_pessoa=5,
-carroceria="Sedan",
-tipo_motor="Combustão",
-tipo_veiculo="Carro",
-peso=1350,
-preco=80000.00
-),
-
-"Honda Civic": Habilitacao(
-nome="Honda Civic",
-tracao=2,
-quantidade_rodas=4,
-quant_pessoa=5,
-carroceria="Sedan",
-tipo_motor="Combustão",
-tipo_veiculo="Carro",
-peso=1370,
-preco=78000.00
-),
-
-"Volkswagen Golf": Habilitacao(
-nome="Volkswagen Golf",
+"Chevrolet Bolt EV": Habilitacao(
+nome="Chevrolet Bolt EV",
 tracao=2,
 quantidade_rodas=4,
 quant_pessoa=5,
 carroceria="Hatchback",
-tipo_motor="Combustão",
+tipo_motor="Elétrico",
 tipo_veiculo="Carro",
-peso=1300,
-preco=70000.00
+peso=1700,
+preco=40000.00
+),
+
+"Ford Mustang Mach-E": Habilitacao(
+nome="Ford Mustang Mach-E",
+tracao=2,
+quantidade_rodas=4,
+quant_pessoa=5,
+carroceria="SUV",
+tipo_motor="Elétrico",
+tipo_veiculo="Carro",
+peso=2000,
+preco=60000.00
+),
+
+"Audi e-tron": Habilitacao(
+nome="Audi e-tron",
+tracao=4,
+quantidade_rodas=4,
+quant_pessoa=5,
+carroceria="SUV",
+tipo_motor="Elétrico",
+tipo_veiculo="Carro",
+peso=2500,
+preco=80000.00
+),
+
+"Tesla Model 3": Habilitacao(
+nome="Tesla Model 3",
+tracao=2,
+quantidade_rodas=4,
+quant_pessoa=5,
+carroceria="Sedan",
+tipo_motor="Elétrico",
+tipo_veiculo="Carro",
+peso=1800,
+preco=55000.00
 ),
 
 "BMW Serie 3": Habilitacao(
@@ -143,28 +146,28 @@ peso=1800,
 preco=140000.00
 ),
 
-"Chevrolet S10": Habilitacao(
-nome="Chevrolet S10",
-tracao=4,
+"Nissan e-NV200": Habilitacao(
+nome="Nissan e-NV200",
+tracao=2,
 quantidade_rodas=4,
 quant_pessoa=5,
-carroceria="Picape",
-tipo_motor="Combustão",
-tipo_veiculo="Caminhonete",
-peso=1750,
-preco=135000.00
+carroceria="Van",
+tipo_motor="Elétrico",
+tipo_veiculo="Van",
+peso=1565, 
+preco=260000.00
 ),
 
-"Toyota Hilux": Habilitacao(
-nome="Toyota Hilux",
+"Tesla Cybertruck": Habilitacao(
+nome="Tesla Cybertruck",
 tracao=4,
 quantidade_rodas=4,
-quant_pessoa=5,
+quant_pessoa=6,
 carroceria="Picape",
-tipo_motor="Combustão",
+tipo_motor="Elétrico",
 tipo_veiculo="Caminhonete",
-peso=1850,
-preco=150000.00
+peso=~2500,
+preco=4000000.00
 ),
 
 "Ford Transit": Habilitacao(
@@ -179,16 +182,16 @@ peso=2000,
 preco=100000.00
 ),
 
-"Honda CB 500F": Habilitacao(
-nome="Honda CB 500F",
-tracao=1,
+"Energica Eva Ribelle": Habilitacao(
+nome="Energica Eva Ribelle",
+tracao=2,
 quantidade_rodas=2,
-quant_pessoa=2,
+quant_pessoa=1,
 carroceria="Naked",
-tipo_motor="Combustão",
+tipo_motor="Elétrico",
 tipo_veiculo="Moto",
-peso=190,
-preco=30000.00
+peso=260,
+preco=23400.00
 ),
 
 "Yamaha MT-07": Habilitacao(
@@ -238,24 +241,241 @@ tipo_veiculo="Moto",
 peso=197,
 preco=50000.00
 ),
-"Ducati Monster 821": Habilitacao(
-nome="Ducati Monster 821",
-tracao=1,
+"Zero S": Habilitacao(
+nome="Zero S",
+tracao=2,
 quantidade_rodas=2,
 quant_pessoa=2,
 carroceria="Naked",
-tipo_motor="Combustão",
+tipo_motor="Elétrico",
 tipo_veiculo="Moto",
-peso=206,
-preco=45000.00
-)
+peso=188,
+preco=15995.00
+),
+"Audi e-tron GT": Habilitacao(
+nome="Audi e-tron GT",
+tracao=4,
+quantidade_rodas=4,
+quant_pessoa=5,
+carroceria="Sedan",
+tipo_motor="Elétrico",
+tipo_veiculo="Sedan",
+peso=2250,
+preco=180000.00
+),
+"Nissan Leaf":Habilitacao(
+nome="Nissan Leaf",
+tracao=2,
+quantidade_rodas=4,
+quant_pessoa=5,
+carroceria="Hatchback",
+tipo_motor="Elétrico",
+tipo_veiculo="Hatchback",
+peso=1491,
+preco=200000.00
+),
+"Toyota SW4":Habilitacao(
+nome="Toyota SW4",
+tracao=4,
+quantidade_rodas=4,
+quant_pessoa=7,
+carroceria="SUV",
+tipo_motor="Combustão",
+tipo_veiculo="Carro",
+peso=2200,
+preco=250000.00
+),
+"Jeep Renegade":Habilitacao(
+    nome="Jeep Renegade",
+    tracao=2,
+    quantidade_rodas=4,
+    quant_pessoa=5,
+    carroceria="SUV",
+    tipo_motor="Combustão",
+    tipo_veiculo="Carro",
+    peso=1450,
+    preco=120000.00
+),
+"Ford F-150":Habilitacao(
+nome="Ford F-150",
+tracao=4,
+quantidade_rodas=4,
+quant_pessoa=5,
+carroceria="Picape",
+tipo_motor="Combustão",
+tipo_veiculo="Caminhonete",
+peso=2200,
+preco=300000.00
+),
+"Ford F-150 Electric":Habilitacao(
+nome="Ford F-150 Electric",
+tracao=4,
+quantidade_rodas=4,
+quant_pessoa=5,
+carroceria="Picape",
+tipo_motor="Elétrico",
+tipo_veiculo="Caminhonete",
+peso=2500,
+preco=350000.00
+),
+"Zero SR/F":Habilitacao(
+nome="Zero SR/F",
+tracao=2,
+quantidade_rodas=2,
+quant_pessoa=1,
+carroceria="Sport",
+tipo_motor="Elétrico",
+tipo_veiculo="Moto",
+peso=220,
+preco=22995.00
+),
+"Energica Ego":Habilitacao(
+nome="Energica Ego",
+tracao=2,
+quantidade_rodas=2,
+quant_pessoa=1,
+carroceria="Sport",
+tipo_motor="Elétrico",
+tipo_veiculo="Moto",
+peso=258,
+preco=25900.00
+),
+
     }
-print(len(banco_de_dados))
-print_master(banco_de_dados["Ducati Monster 821"])
 
+while True:
+    escolha = int(input("""
++------------------- Bem-vindo ao banco de dados --------------------
+| 1 - Questionário de escolha de carro
+| 2 - Sair
++--------------------------------------------------------------------
+    - """))
+    
+    if escolha == 1:
+        hab_user = int(input("""
+Qual veículo você busca (será suposto que você tem habilitação do mesmo)
+    | 1 - Carro
+    | 2 - Moto
+        - """))
+        if hab_user not in [1,2]:
+            print("Número inválido, escolha novamente")
+            continue
+        elif hab_user == 1:
+            hab_user = "Carro"
+        else:
+            hab_user = "Moto"
+        
+        filtro = []
+        
+        for veiculo, hab in banco_de_dados.items():
+            if hab_user == "Carro" and (hab.tipo_veiculo == "Van" or hab.tipo_veiculo == "Caminhonete"):
+                continue
+            elif hab_user not in hab.tipo_veiculo:
+                filtro.append(veiculo)
+        
+        for veiculo in filtro:
+            del banco_de_dados[veiculo]
+        break
+    else:
+        exit()
 
+if hab_user == "Carro":
+    while True:
+        carroceria_user = int(input(f"""
+Que tipo de carroceria você gostaria?
+    | 1 - Sedan
+    | 2 - Hatchback
+    | 3 - SUV
+    | 4 - Van
+    | 5 - Picape
+        - """))
+        if carroceria_user not in [1,2,3,4,5]:
+                print("Número inválido, escolha novamente")
+                continue
+        elif carroceria_user == 1:
+            carroceria_user = "Sedan"
+        elif carroceria_user == 2:
+            carroceria_user = "Hatchback"
+        elif carroceria_user == 3:
+            carroceria_user = "SUV"
+        elif carroceria_user == 4:
+            carroceria_user = "Van"
+        else:
+            carroceria_user = "Picape"
 
+        filtro = []
+            
+        for veiculo, carroc in banco_de_dados.items():
 
+            if carroceria_user not in carroc.carroceria:
+                filtro.append(veiculo)
+            
+        for veiculo in filtro:
+            del banco_de_dados[veiculo]
+
+        print("Veículos restantes de acordo com a sua resposta: \n")
+        for key,value in banco_de_dados.items():
+            print(f"| {key} - {value.carroceria}")
+        break
+
+else:
+    while True:
+        carroceria_user = int(input(f"""
+Que tipo de carroceria você gostaria?
+    | 1 - Sport
+    | 2 - Naked
+        - """))
+        if carroceria_user not in [1,2]:
+                print("Número inválido, escolha novamente")
+                continue
+        elif carroceria_user == 1:
+            carroceria_user = "Sport"
+        elif carroceria_user == 2:
+            carroceria_user = "Naked"
+
+        filtro = []
+            
+        for veiculo, carroc in banco_de_dados.items():
+
+            if carroceria_user not in carroc.carroceria:
+                filtro.append(veiculo)
+            
+        for veiculo in filtro:
+            del banco_de_dados[veiculo]
+
+        print("Veículos restantes de acordo com a sua resposta: \n")
+        for key,value in banco_de_dados.items():
+            print(f"| {key} - {value.carroceria}")
+        break
+
+while True:
+    motor_user = int(input("""
+Qual tipo de motor você gostaria:
+    | 1 - Combustão
+    | 2 - Elétrico
+        - """))
+
+    if motor_user not in [1,2]:
+        print("Número inválido, por favor selecione novamente")
+        continue
+    elif motor_user == 1:
+        motor_user = "Combustão"
+    else:
+        motor_user = "Elétrico"
+
+    filtro = []
+
+    for veiculo, motor in banco_de_dados.items():
+        if motor_user not in motor.tipo_motor:
+            filtro.append(veiculo)
+        
+    for veiculo in filtro:
+        del banco_de_dados[veiculo]
+    
+    print("Esses foram os veículos de acordo com as suas respostas: \n")
+    for veiculo,value in banco_de_dados.items():
+        print_master(banco_de_dados[veiculo])
+    break
 
 
 

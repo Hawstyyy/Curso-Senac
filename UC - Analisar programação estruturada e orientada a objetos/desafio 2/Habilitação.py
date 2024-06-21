@@ -1,8 +1,8 @@
 from Carroceria import Carroceria
 
 class Habilitacao(Carroceria):
-  def __init__(self, nome, tipo_veiculo,tracao, quantidade_rodas, peso, tipo_motor, preco, carroceria, quant_pessoa):
-    super().__init__(nome, tipo_veiculo,tracao, quantidade_rodas, peso, tipo_motor, preco, carroceria)
+  def __init__(self, nome, tipo_veiculo,tracao, quantidade_rodas, peso, tipo_motor, preco, potencia, carroceria, quant_pessoa):
+    super().__init__(nome, tipo_veiculo,tracao, quantidade_rodas, peso, tipo_motor, preco, potencia ,carroceria)
     self.quant_pessoa = quant_pessoa
 
   def tipo(self):

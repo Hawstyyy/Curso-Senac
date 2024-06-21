@@ -25,7 +25,7 @@ tipo_motor="Elétrico",
 tipo_veiculo="Carro",
 peso=1700,
 preco=40000.00,
-potencia="200 kw"
+potencia=200
 ),
 
 "Ford Mustang Mach-E": Habilitacao(
@@ -38,7 +38,7 @@ tipo_motor="Elétrico",
 tipo_veiculo="Carro",
 peso=2000,
 preco=60000.00,
-potencia="250 kw"
+potencia=250
 ),
 
 "Audi e-tron": Habilitacao(
@@ -51,7 +51,7 @@ tipo_motor="Elétrico",
 tipo_veiculo="Carro",
 peso=2500,
 preco=80000.00,
-potencia="300 kw"
+potencia=300
 ),
 
 "Tesla Model 3": Habilitacao(
@@ -64,7 +64,7 @@ tipo_motor="Elétrico",
 tipo_veiculo="Carro",
 peso=1800,
 preco=55000.00,
-potencia="250 kw"
+potencia=250
 ),
 
 "BMW Serie 3": Habilitacao(
@@ -77,7 +77,7 @@ tipo_motor="Combustão",
 tipo_veiculo="Carro",
 peso=1500,
 preco=120000.00,
-potencia="200 cv"
+potencia=200
 ),
 
 "Mercedes-Benz Classe C": Habilitacao(
@@ -90,7 +90,7 @@ tipo_motor="Combustão",
 tipo_veiculo="Carro",
 peso=1550,
 preco=125000.00,
-potencia="180 cv"
+potencia=180
 ),
 
 "Audi A4": Habilitacao(
@@ -103,7 +103,7 @@ tipo_motor="Combustão",
 tipo_veiculo="Carro",
 peso=1520,
 preco=115000.00,
-potencia="190 cv"
+potencia=190
 ),
 
 "Chevrolet Onix": Habilitacao(
@@ -116,7 +116,7 @@ tipo_motor="Combustão",
 tipo_veiculo="Carro",
 peso=1250,
 preco=60000.00,
-potencia="130 cv"
+potencia=130
 ),
 
 "Hyundai HB20": Habilitacao(
@@ -129,7 +129,7 @@ tipo_motor="Combustão",
 tipo_veiculo="Carro",
 peso=1200,
 preco=58000.00,
-potencia="120 cv"
+potencia=120
 ),
 
 "Kia Cerato": Habilitacao(
@@ -142,7 +142,7 @@ tipo_motor="Combustão",
 tipo_veiculo="Carro",
 peso=1380,
 preco=90000.00,
-potencia="150 cv"
+potencia=150
 ),
 
 "Ford Ranger": Habilitacao(
@@ -155,7 +155,7 @@ tipo_motor="Combustão",
 tipo_veiculo="Caminhonete",
 peso=1800,
 preco=140000.00,
-potencia="200 cv"
+potencia=200
 ),
 
 "Nissan e-NV200": Habilitacao(
@@ -168,7 +168,7 @@ tipo_motor="Elétrico",
 tipo_veiculo="Van",
 peso=1565, 
 preco=260000.00,
-potencia="80 kw"
+potencia=80
 ),
 
 "Tesla Cybertruck": Habilitacao(
@@ -181,7 +181,7 @@ tipo_motor="Elétrico",
 tipo_veiculo="Caminhonete",
 peso=2500,
 preco=4000000.00,
-potencia="400 kw"
+potencia=400
 ),
 
 "Ford Transit": Habilitacao(
@@ -194,7 +194,7 @@ tipo_motor="Combustão",
 tipo_veiculo="Van",
 peso=2000,
 preco=100000.00,
-potencia="150 cv"
+potencia=150
 ),
 
 "Energica Eva Ribelle": Habilitacao(
@@ -207,7 +207,7 @@ tipo_motor="Elétrico",
 tipo_veiculo="Moto",
 peso=260,
 preco=23400.00,
-potencia="107 kw"
+potencia=107
 ),
 
 "Yamaha MT-07": Habilitacao(
@@ -220,7 +220,7 @@ tipo_motor="Combustão",
 tipo_veiculo="Moto",
 peso=182,
 preco=28000.00,
-potencia="74 cv"
+potencia=74
 ),
 
 "Kawasaki Ninja 650": Habilitacao(
@@ -233,7 +233,7 @@ tipo_motor="Combustão",
 tipo_veiculo="Moto",
 peso=196,
 preco=32000.00,
-potencia="68 cv"
+potencia=68
 ),
 
 "Suzuki GSX-S750": Habilitacao(
@@ -246,7 +246,7 @@ tipo_motor="Combustão",
 tipo_veiculo="Moto",
 peso=213,
 preco=35000.00,
-potencia="114 cv"
+potencia=114
 ),
 
 "BMW S 1000 RR": Habilitacao(
@@ -259,7 +259,7 @@ tipo_motor="Combustão",
 tipo_veiculo="Moto",
 peso=197,
 preco=50000.00,
-potencia="207 cv"
+potencia=207
 ),
 "Zero S": Habilitacao(
 nome="Zero S",
@@ -271,7 +271,7 @@ tipo_motor="Elétrico",
 tipo_veiculo="Moto",
 peso=188,
 preco=15995.00,
-potencia="82 cv"
+potencia=82
 ),
 "Audi e-tron GT": Habilitacao(
 nome="Audi e-tron GT",
@@ -283,7 +283,7 @@ tipo_motor="Elétrico",
 tipo_veiculo="Sedan",
 peso=2250,
 preco=180000.00,
-potencia="350 kw"
+potencia=350
 ),
 "Nissan Leaf":Habilitacao(
 nome="Nissan Leaf",
@@ -295,7 +295,7 @@ tipo_motor="Elétrico",
 tipo_veiculo="Hatchback",
 peso=1491,
 preco=200000.00,
-potencia="110 kw"
+potencia=110
 ),
 "Toyota SW4":Habilitacao(
 nome="Toyota SW4",
@@ -307,7 +307,7 @@ tipo_motor="Combustão",
 tipo_veiculo="Carro",
 peso=2200,
 preco=250000.00,
-potencia=""
+potencia=204
 ),
 "Jeep Renegade":Habilitacao(
     nome="Jeep Renegade",
@@ -318,7 +318,8 @@ carroceria="SUV",
 tipo_motor="Combustão",
 tipo_veiculo="Carro",
 peso=1450,
-preco=120000.00
+preco=120000.00,
+potencia=185
 ),
 "Ford F-150":Habilitacao(
 nome="Ford F-150",
@@ -329,7 +330,8 @@ carroceria="Picape",
 tipo_motor="Combustão",
 tipo_veiculo="Caminhonete",
 peso=2200,
-preco=300000.00
+preco=300000.00,
+potencia=405
 ),
 "Ford F-150 Electric":Habilitacao(
 nome="Ford F-150 Electric",
@@ -340,7 +342,8 @@ carroceria="Picape",
 tipo_motor="Elétrico",
 tipo_veiculo="Caminhonete",
 peso=2500,
-preco=350000.00
+preco=350000.00,
+potencia=420
 ),
 "Zero SR/F":Habilitacao(
 nome="Zero SR/F",
@@ -351,7 +354,8 @@ carroceria="Sport",
 tipo_motor="Elétrico",
 tipo_veiculo="Moto",
 peso=220,
-preco=22995.00
+preco=22995.00,
+potencia=82
 ),
 "Energica Ego":Habilitacao(
 nome="Energica Ego",
@@ -362,7 +366,8 @@ carroceria="Sport",
 tipo_motor="Elétrico",
 tipo_veiculo="Moto",
 peso=258,
-preco=25900.00
+preco=25900.00,
+potencia=100
 ),
 
     }
@@ -400,8 +405,10 @@ Oque você prefere?
         for veiculo in filtro:
             del banco_de_dados[veiculo]
         break
-    else:
+    elif escolha == 2:
         exit()
+    elif escolha not in [1,2]:
+        print("- Número inválido, tente novamente")
 
 if hab_user == "Carro":
     while True:
@@ -428,9 +435,7 @@ Que tipo de carroceria você gosta em um carro?
             carroceria_user = "Picape"
 
         filtro = []
-            
         for veiculo, carroc in banco_de_dados.items():
-
             if carroceria_user not in carroc.carroceria:
                 filtro.append(veiculo)
             
@@ -486,7 +491,7 @@ Você tem preferência em qual tipo propulsão?
     else:
         motor_user = "Sem preferência"
 
-    if motor_user in ["Combustão" or "Elétrico"]:
+    if motor_user  == "Combustão" or motor_user ==  "Elétrico":
         filtro = []
 
         for veiculo, motor in banco_de_dados.items():
@@ -497,23 +502,93 @@ Você tem preferência em qual tipo propulsão?
             del banco_de_dados[veiculo]
     break
 
-print("\n\nEsses foram os veículos de acordo com as suas respostas\n\n")
-for veiculo,value in banco_de_dados.items():
-    print_master(banco_de_dados[veiculo])
+while True:
+    potencia_user = int(input("""
+Oque você curte?
+    | 1 - uma vida mais rápida e veloz
+    | 2 - uma vida mais tranquila que tome seu tempo
+        - """))
+    
+    if potencia_user not in [1,2]:
+        print("Número inválido, por favor selecione novamente")
+        continue
+    elif potencia_user == 1:
+        potencia_user = "Alta potência"
+    else:
+        potencia_user = "Baixa potência"
+    
+    if motor_user == "Combustão":
+        if potencia_user == "Baixa potência":
+            filtro = []
+            
+            for veiculo, potencia in banco_de_dados.items():
+                if potencia.potencia > 150:
+                    filtro.append(veiculo)
+                
+            for veiculo in filtro:
+                del banco_de_dados[veiculo]
+            break
 
-escolha = input("\n\n- Gostaria de apenas ver o veículo de menor preço da lista? (S/N) ").capitalize()
-if escolha not in ["S","Sim","N","Não"]:
-    print("- Resposta inválida")
+        else:
+            filtro = []
+            
+            for veiculo, potencia in banco_de_dados.items():
+                if potencia.potencia < 150:
+                    filtro.append(veiculo)
+                
+            for veiculo in filtro:
+                del banco_de_dados[veiculo]
+            break
 
-elif escolha in ["S","Sim"]:
-    print("\n----------- O veículo de menor valor nesta lista é: \n \n")
-    menor_valor = None
-    for nome, veiculo in banco_de_dados.items():
-        if menor_valor == None:
-            menor_valor = veiculo
-        
-        if veiculo.preco < menor_valor.preco:
-            menor_valor = veiculo
-    print_master(menor_valor)
+    else:
+
+        if potencia_user == "Baixa potência":
+            filtro = []
+            
+            for veiculo, potencia in banco_de_dados.items():
+                if potencia.potencia > 200:
+                    filtro.append(veiculo)
+                
+            for veiculo in filtro:
+                del banco_de_dados[veiculo]
+            break
+
+        else:
+            filtro = []
+            
+            for veiculo, potencia in banco_de_dados.items():
+                if potencia.potencia < 200:
+                    filtro.append(veiculo)
+                
+            for veiculo in filtro:
+                del banco_de_dados[veiculo]
+            break
+
+print("\n\nEsses foram os veículos de acordo com as suas respostas\n")
+if len(banco_de_dados) == 0:
+    print("- Não foram encontrados veículos para seus gostos atualmente, tente em outro momento!")
 else:
-    print("Encerrando.")
+    for veiculo,value in banco_de_dados.items():
+        print_master(banco_de_dados[veiculo])
+
+if len(banco_de_dados) > 1:
+    escolha = input("\n\n- Gostaria de apenas ver o veículo de menor preço da lista? (S/N) ").capitalize()
+    if escolha not in ["S","Sim","N","Não"]:
+        print("- Resposta inválida")
+
+    elif escolha in ["S","Sim"]:
+        print("\n----------- O veículo de menor valor nesta lista é: \n")
+        menor_valor = None
+        for nome, veiculo in banco_de_dados.items():
+            if menor_valor == None:
+                menor_valor = veiculo
+            
+            if veiculo.preco < menor_valor.preco:
+                menor_valor = veiculo
+        print_master(menor_valor)
+        print("\nObrigado por usar o programa, encerrando...")
+    else:
+        print("\nObrigado por usar o programa, encerrando...")
+
+else:
+    print("\nObrigado por usar o programa, encerrando...")

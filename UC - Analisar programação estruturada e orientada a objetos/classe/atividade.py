@@ -16,7 +16,7 @@ class Empresa:
   
   print("------------------------------------------------------------------")
   gerar_nota()
-  trabalho_escravoexe()
+  trabalho()
 
 empresa = Empresa()
 print(empresa.detalhes())

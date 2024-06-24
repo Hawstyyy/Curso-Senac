@@ -405,6 +405,7 @@ Oque você prefere?
         for veiculo in filtro:
             del banco_de_dados[veiculo]
         break
+    
     elif escolha == 2:
         exit()
     elif escolha not in [1,2]:

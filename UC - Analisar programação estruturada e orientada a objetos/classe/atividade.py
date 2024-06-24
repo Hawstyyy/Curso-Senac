@@ -3,7 +3,7 @@ print()
 
 def gerar_nota():
   print("nota fiscal uau")
-def trabalho_escravoexe():
+def trabalho():
   print("carteira de trabalho clt")
 
 class Empresa:

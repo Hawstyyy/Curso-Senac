@@ -3,7 +3,7 @@ sorteado_final = []
 sorteado = []
 
 class Bingo():
-  def sorte():
+  def sorte(self):
     while True:
       numero = random.randint(1,75)
       letra = ["B","I","N","G","O"]
@@ -30,5 +30,6 @@ class Bingo():
       else:
         continue
       
-      print(sorteado_final)
+
+      print(", ".join(map(str, sorteado_final)))
       break

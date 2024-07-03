@@ -30,5 +30,5 @@ class Bingo():
       else:
         continue
       
-      print("\n",numero_sorteado, "\n")
+      print("\n",numero_sorteado)
       break

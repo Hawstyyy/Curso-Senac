@@ -68,9 +68,9 @@ class Tabela:
             if self.b[coluna] == 'X' and self.i[coluna] == 'X' and self.n[coluna] == 'X' and self.g[coluna] == 'X' and self.o[coluna] == 'X':
                 return True
         
-        if self.b[0] == 'X' and self.i[1] == 'X' and self.g[3] == 'X' and self.o[4] == 'X':
+        if self.b[0] == 'X' and self.i[1] == 'X' and self.n[2] == 'X' and self.g[3] == 'X' and self.o[4] == 'X':
             return True
-        if self.b[4] == 'X' and self.i[3] == 'X' and self.g[1] == 'X' and self.o[0] == 'X':
+        elif self.b[4] == 'X' and self.i[3] == 'X' and self.n[2] == 'X' and self.g[1] == 'X' and self.o[0] == 'X':
             return True
         
         return False
@@ -88,7 +88,7 @@ class Tabela:
                     print(f"{self.i[linha]}", end="  ")
                 elif coluna == 2:
                     if linha == 2:
-                        print(" X ", end="  ")
+                        print("X", end="  ")
                     else:
                         print(f"{self.n[linha]}", end="  ")
                 elif coluna == 3:

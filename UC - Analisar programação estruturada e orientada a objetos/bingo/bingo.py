@@ -18,18 +18,17 @@ class Bingo():
         sorteado.append(numero)
       
       if numero < 15 and letra_sort == "B":
-        sorteado_final.append(str(numero) + letra_sort)
+        numero_sorteado = numero
       elif numero > 15 and numero < 30 and letra_sort == "I":
-        sorteado_final.append(str(numero) + letra_sort)
+        numero_sorteado = numero
       elif numero > 30 and numero < 45 and letra_sort == "N":
-        sorteado_final.append(str(numero) + letra_sort)
+        numero_sorteado = numero
       elif numero > 45 and numero < 60 and letra_sort == "G":
-        sorteado_final.append(str(numero) + letra_sort)
+        numero_sorteado = numero
       elif numero > 60 and numero < 75 and letra_sort == "O":
-        sorteado_final.append(str(numero) + letra_sort)
+        numero_sorteado = numero
       else:
         continue
       
-
-      print(", ".join(map(str, sorteado_final)))
+      print("\n",numero_sorteado, "\n")
       break

@@ -83,16 +83,16 @@ class Tabela:
         for linha in range(5):
             for coluna in range(5):
                 if coluna == 0:
-                    print(f"| {self.b[linha]} |", end="  ")
+                    print(f"{self.b[linha]}", end="  ")
                 elif coluna == 1:
-                    print(f"| {self.i[linha]} |", end="  ")
+                    print(f"{self.i[linha]}", end="  ")
                 elif coluna == 2:
                     if linha == 2:
-                        print("| X  |", end=" ")
+                        print("X", end="  ")
                     else:
-                        print(f"| {self.n[linha]} |", end="  ")
+                        print(f"{self.n[linha]}", end="  ")
                 elif coluna == 3:
-                    print(f"| {self.g[linha]} |", end="  ")
+                    print(f"{self.g[linha]}", end="  ")
                 elif coluna == 4:
-                    print(f"| {self.o[linha]} |", end="  ")
+                    print(f"{self.o[linha]}", end="  ")
             print()

@@ -1,7 +1,7 @@
 banco = open("banco.txt", "r")
 linhas = banco.readlines()
 
-class Registro:
+class Registro():
   def __init__(self, codigo, nome):
     self.codigo = int(self.codigo)
     self.nome = self.nome

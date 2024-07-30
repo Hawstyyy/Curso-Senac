@@ -1,7 +1,7 @@
 from registro import Registro
 registro = Registro
 
-banco = open("banco.txt", "r")
+banco = open("./banco.txt", "r")
 linhas = banco.readlines()
 
 while True:

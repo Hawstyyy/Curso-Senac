@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://liveondemand.com.br/wp-content/uploads/2019/05/logo-SENAC.png" alt="Logo do projeto"/>
+  <img src="./assets/senac branco.png" alt="Logo do projeto"/>
 </p>
 
 ## 📝 Descrição do curso:[^1]

@@ -10,9 +10,9 @@ CREATE TABLE catalogo(
   filme_id INT NOT NULL,
   serie_id INT NOT NULL,
   documentarios_id INT NOT NULL,
-  FOREIGN KEY (filme_id) REFERENCES filmes(id)
-  FOREIGN KEY (serie_id) REFERENCES serie(id)
-  FOREIGN KEY (documentarios_id) REFERENCES documentarios(id)
+  FOREIGN KEY (filme_id) REFERENCES filmes(id),
+  FOREIGN KEY (serie_id) REFERENCES serie(id),
+  FOREIGN KEY (documentarios_id) REFERENCES documentarios(id),
 )
 
 CREATE TABLE filmes(

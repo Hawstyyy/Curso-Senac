@@ -36,7 +36,6 @@ CREATE TABLE series(
   id INT auto_increment,
   titulo VARCHAR(200) NOT NULL,
   ano_prod INT NOT NULL,
-  duration VARCHAR(200) NOT NULL,
   temporada INT NOT NULL,
   episodio INT NOT NULL,
   FOREIGN KEY (episodio) REFERENCES episodios(id)
@@ -58,12 +57,12 @@ CREATE TABLE documentarios(
 
 CREATE TABLE usuarios(
   id INT auto_increment,
-  email VARCHAR(100) NOT NULL,
+  email VARCHAR(100) PRIMARY KEY,
   senha VARCHAR(100) NOT NULL,
   telefone VARCHAR(100) NOT NULL,
-  cpf VARCHAR(100) NOT NULL,
+  cpf VARCHAR(100) PRIMARY KEY,
   endereco INT NOT NULL,
-  cartao VARCHAR(100) NOT NULL,
+  cartao VARCHAR(100) PRIMARY KEY,
   mensalidade FLOAT NOT NULL,
   FOREIGN KEY (endereco) REFERENCES enderecos(id)
 );

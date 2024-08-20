@@ -4,6 +4,7 @@ from tkinter import ttk
 def teste():
   global cliques
   cliques += 1
+  print("conta: ",cliques)
   btn.config(text=f"conta {cliques}")
 
 root = Tk()

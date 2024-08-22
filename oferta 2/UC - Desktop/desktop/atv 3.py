@@ -1,5 +1,5 @@
 from tkinter import *
-from tkinter import messagebox, ttk
+from tkinter import messagebox,ttk
 
 def verificar():
   if usuario.get() == "" and senha.get() == "" and senhaConfirmar.get() == "":
@@ -17,19 +17,19 @@ root = Tk()
 root.geometry("600x400")
 root.title("Tela de cadastro")
 
-ttk.Label(root, text="Usuário:").place(relx=0.38, rely=0.25, anchor="center")
-usuario = ttk.Entry(root, width=30)
+Label(root, text="Usuário:", font=("Arial", 10, "bold")).place(relx=0.39, rely=0.25, anchor="center")
+usuario = Entry(root, width=30)
 usuario.place(relx=0.5, rely=0.3, anchor="center")
 
-ttk.Label(root, text="Senha:").place(relx=0.37, rely=0.4, anchor="center")
-senha = ttk.Entry(root, width=30, show="*")
+Label(root, text="Senha:", font=("Arial", 10, "bold")).place(relx=0.38, rely=0.4, anchor="center")
+senha = Entry(root, width=30, show="*")
 senha.place(relx=0.5, rely=0.45, anchor="center")
 
-ttk.Label(root, text="Confirmar Senha:").place(relx=0.42, rely=0.55, anchor="center")
-senhaConfirmar = ttk.Entry(root, width=30, show="*")
+Label(root, text="Confirmar Senha:", font=("Arial", 10, "bold")).place(relx=0.44, rely=0.55, anchor="center")
+senhaConfirmar = Entry(root, width=30, show="*")
 senhaConfirmar.place(relx=0.5, rely=0.6, anchor="center")
 
-btn = ttk.Button(root, text="Cadastrar", command=verificar)
+btn = ttk.Button(root, text="Cadastrar", command=verificar, style='custom.TButton')
 btn.place(relx=0.5, rely=0.77, anchor="center")
-
+ttk.Style.configure('TButton', foreground='Purple')
 root.mainloop()

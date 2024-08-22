@@ -20,7 +20,7 @@ def proximo():
   image_label = Label(root, image=img1, width=300, height=300).place(rely=0.5,relx=0.5,anchor=CENTER)
   atual += 1
 
-def proximo():
+def anterior():
   global atual, img1,image_label
   atual -= 1
   try:

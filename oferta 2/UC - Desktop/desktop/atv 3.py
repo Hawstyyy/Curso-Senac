@@ -31,5 +31,5 @@ senhaConfirmar.place(relx=0.5, rely=0.6, anchor="center")
 
 btn = ttk.Button(root, text="Cadastrar", command=verificar, style='custom.TButton')
 btn.place(relx=0.5, rely=0.77, anchor="center")
-ttk.Style.configure('TButton', foreground='Purple')
+
 root.mainloop()

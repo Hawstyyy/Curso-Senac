@@ -21,21 +21,19 @@ def proximo():
   atual += 1
 
 def comentar():
-  global comentario
+    global comentario_entry
+    comentario_text = comentario_entry.get()
+    coment.config(text=comentario_text)
 
-  texto = ttk.Label(root, text="Escreva seu comentário", font=("Arial", 12, "bold"))
-  texto.place(relx=0.5, rely=0.4, anchor=CENTER)
-
-  comentario = Entry(root)
-  comentario.place(relx=0.5, rely=0.5, anchor=CENTER, width=180)
-  coment.config(text=comentario.get())
-  
 
 btn = ttk.Button(root, text="Próximo", command=proximo)
 btn.place(rely=0.5,relx=0.9,anchor=CENTER)
 
-coment = ttk.Label(root, text="")
+coment = ttk.Label(root, text="nenhum")
 coment.place(rely=0.1,relx=0.5,anchor=CENTER)
+
+comentario_entry = Entry(root)
+comentario_entry.place(relx=0.5, rely=0.9, anchor=CENTER, width=180)
 
 btn = ttk.Button(root, text="Comentar", command=comentar)
 btn.place(rely=0.95,relx=0.5,anchor=CENTER)

@@ -20,6 +20,16 @@ def proximo():
   image_label = Label(root, image=img1, width=300, height=300).place(rely=0.5,relx=0.5,anchor=CENTER)
   atual += 1
 
+def proximo():
+  global atual, img1,image_label
+  atual -= 1
+  try:
+    img1 = PhotoImage(file=f"C:\\Users\\EnzoLopez\\Documents\\github\\Curso-Senac\\oferta 2\\UC - Desktop\\desktop\\assets\\{atual}.png")
+  except:
+    messagebox.showinfo("Fim", "Não há mais imagens")
+  image_label = Label(root, image=img1, width=300, height=300).place(rely=0.5,relx=0.5,anchor=CENTER)
+
+
 def comentar():
     global comentario_entry
     comentario_text = comentario_entry.get()

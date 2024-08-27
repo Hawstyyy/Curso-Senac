@@ -12,9 +12,9 @@ def proximo():
   global atual, img1,image_label
   try:
     img1 = PhotoImage(file=f"C:\\Users\\EnzoLopez\\Documents\\github\\Curso-Senac\\oferta 2\\UC - Desktop\\desktop\\assets\\{atual}.png")
+    image_label = Label(root, image=img1, width=300, height=300).place(rely=0.5,relx=0.5,anchor=CENTER)
   except:
     messagebox.showinfo("Fim", "Não há mais imagens")
-  image_label = Label(root, image=img1, width=300, height=300).place(rely=0.5,relx=0.5,anchor=CENTER)
   atual += 1
 
 def anterior():
@@ -22,9 +22,9 @@ def anterior():
   atual -= 1
   try:
     img1 = PhotoImage(file=f"C:\\Users\\EnzoLopez\\Documents\\GitHub\\Senac\\oferta 2\\UC - Desktop\\desktop\\assets\{atual}.png")
+    image_label = Label(root, image=img1, width=300, height=300).place(rely=0.5,relx=0.5,anchor=CENTER)
   except:
     messagebox.showinfo("Fim", "Não há mais imagens")
-  image_label = Label(root, image=img1, width=300, height=300).place(rely=0.5,relx=0.5,anchor=CENTER)
 
 def comentar():
     global comentario_entry

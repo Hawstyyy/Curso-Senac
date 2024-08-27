@@ -10,23 +10,24 @@ class Login:
     root = Tk()
     root.geometry("600x400")
     root.title("Tela de login")
+    root.config(background="Gray")
 
-    Label(root, text="Usuário:", font=("Arial", 10, "bold")).place(relx=0.39, rely=0.25, anchor="center")
+    Label(root, text="Usuário:", font=("Arial", 10, "bold"), background="Gray").place(relx=0.39, rely=0.25, anchor="center")
     usuario = Entry(root, width=30)
     usuario.place(relx=0.5, rely=0.3, anchor="center")
 
-    Label(root, text="Senha:", font=("Arial", 10, "bold")).place(relx=0.38, rely=0.4, anchor="center")
+    Label(root, text="Senha:", font=("Arial", 10, "bold"), background="Gray").place(relx=0.38, rely=0.4, anchor="center")
     senha = Entry(root, width=30, show="*")
     senha.place(relx=0.5, rely=0.45, anchor="center")
 
-    Label(root, text="Confirmar Senha:", font=("Arial", 10, "bold")).place(relx=0.44, rely=0.55, anchor="center")
+    Label(root, text="Confirmar Senha:", font=("Arial", 10, "bold"), background="Gray").place(relx=0.44, rely=0.55, anchor="center")
     senhaConfirmar = Entry(root, width=30, show="*")
     senhaConfirmar.place(relx=0.5, rely=0.6, anchor="center")
 
-    btn = ttk.Button(root, text="Cadastrar", command=self.verificar, style='custom.TButton')
+    btn = ttk.Button(root, text="Cadastrar", command=self.verificar, padding=10, width=20)
     btn.place(relx=0.5, rely=0.77, anchor="center")
 
-    root.mainloop()
+    root.mainloop() 
 
   def verificar(self):
     global root, usuario, senha, senhaConfirmar

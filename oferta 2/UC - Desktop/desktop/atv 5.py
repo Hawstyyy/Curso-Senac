@@ -2,9 +2,6 @@ from tkinter import *
 from tkinter import ttk, messagebox
 from tkinter import PhotoImage
 
-
-images = ["moyai1.png", "moyai2.png"]
-
 root = Tk()
 root.geometry("600x400")
 root.title("Galeria")
@@ -24,17 +21,15 @@ def anterior():
   global atual, img1,image_label
   atual -= 1
   try:
-    img1 = PhotoImage(file=f"C:\\Users\\EnzoLopez\\Documents\\github\\Curso-Senac\\oferta 2\\UC - Desktop\\desktop\\assets\\{atual}.png")
+    img1 = PhotoImage(file=f"C:\\Users\\EnzoLopez\\Documents\\GitHub\\Senac\\oferta 2\\UC - Desktop\\desktop\\assets\{atual}.png")
   except:
     messagebox.showinfo("Fim", "Não há mais imagens")
   image_label = Label(root, image=img1, width=300, height=300).place(rely=0.5,relx=0.5,anchor=CENTER)
-
 
 def comentar():
     global comentario_entry
     comentario_text = comentario_entry.get()
     coment.config(text=comentario_text)
-
 
 btn = ttk.Button(root, text="Próximo", command=proximo)
 btn.place(rely=0.5,relx=0.9,anchor=CENTER)

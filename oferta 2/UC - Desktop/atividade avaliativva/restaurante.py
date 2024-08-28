@@ -1,6 +1,8 @@
 from tkinter import *
 from tkinter import ttk
 from entradas import Entradas
+from pratos import PratosPrincipais
+from bebidas import BebidasNaoAlcoolicas
 
 class Restaurante():
   def __init__(self, usuario) -> None:
@@ -8,6 +10,12 @@ class Restaurante():
 
   def entradaButton(self):
     Entradas().start_ent()
+  
+  def pratoButton(self):
+    PratosPrincipais().start_ent()
+
+  def bebidas(self):
+    BebidasNaoAlcoolicas().start_ent()
 
   def start_res(self):
     root = Tk()
@@ -32,10 +40,10 @@ class Restaurante():
     entradas = ttk.Button(root, text="Entradas", width=50, padding=10, command=self.entradaButton)
     entradas.place(relx=0.5, rely=0.35, anchor=CENTER)
 
-    pratos = ttk.Button(root, text="Pratos principais", width=50, padding=10)
+    pratos = ttk.Button(root, text="Pratos principais", width=50, padding=10, command=self.pratoButton)
     pratos.place(relx=0.5, rely=0.4, anchor=CENTER)
 
-    bebidas = ttk.Button(root, text="Bebidas", width=50, padding=10)
+    bebidas = ttk.Button(root, text="Bebidas", width=50, padding=10, command=self.bebidas)
     bebidas.place(relx=0.5, rely=0.45, anchor=CENTER)
 
     alcool = ttk.Button(root, text="Bebidas Alcoólicas", width=50, padding=10)

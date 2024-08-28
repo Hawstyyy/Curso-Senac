@@ -3,6 +3,9 @@ from tkinter import ttk
 from entradas import Entradas
 from pratos import PratosPrincipais
 from bebidas import BebidasNaoAlcoolicas
+from bebidasalcoolicas import BebidasAlcoolicas
+from sobremesa import Sobremesas
+from menu import MenuChefe
 
 class Restaurante():
   def __init__(self, usuario) -> None:
@@ -16,6 +19,15 @@ class Restaurante():
 
   def bebidas(self):
     BebidasNaoAlcoolicas().start_ent()
+
+  def bebidasAlcoolicas(self):
+    BebidasAlcoolicas().start_ent()
+
+  def sobremesa(self):
+    Sobremesas().start_ent()
+
+  def menu(self):
+    MenuChefe().start_ent()
 
   def start_res(self):
     root = Tk()
@@ -46,13 +58,13 @@ class Restaurante():
     bebidas = ttk.Button(root, text="Bebidas", width=50, padding=10, command=self.bebidas)
     bebidas.place(relx=0.5, rely=0.45, anchor=CENTER)
 
-    alcool = ttk.Button(root, text="Bebidas Alcoólicas", width=50, padding=10)
+    alcool = ttk.Button(root, text="Bebidas Alcoólicas", width=50, padding=10, command=self.bebidasAlcoolicas)
     alcool.place(relx=0.5, rely=0.5, anchor=CENTER)
 
-    sobremesas = ttk.Button(root, text="Sobremesas", width=50, padding=10)
+    sobremesas = ttk.Button(root, text="Sobremesas", width=50, padding=10, command=self.sobremesa)
     sobremesas.place(relx=0.5, rely=0.55, anchor=CENTER)
 
-    menu = ttk.Button(root, text="Menu do Chef", width=50, padding=10)
+    menu = ttk.Button(root, text="Menu do Chef", width=50, padding=10, command=self.menu)
     menu.place(relx=0.5, rely=0.60, anchor=CENTER)
 
     root.mainloop()

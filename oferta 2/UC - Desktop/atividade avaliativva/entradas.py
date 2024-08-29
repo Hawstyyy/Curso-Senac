@@ -2,6 +2,9 @@ from tkinter import *
 from tkinter import ttk, PhotoImage
 from carrinho import Carrinho
 
+# Cria uma instância global do carrinho
+carrinho = Carrinho()
+
 class Entradas:
     def __init__(self) -> None:
         self.imagens = []
@@ -29,7 +32,6 @@ class Entradas:
         botao.place(relx=x, rely=y, anchor=CENTER)
 
     def start_ent(self):
-        carrinho = Carrinho()
         self.root.title("Restaurante do Ederson")
         self.root.state('zoomed')
 

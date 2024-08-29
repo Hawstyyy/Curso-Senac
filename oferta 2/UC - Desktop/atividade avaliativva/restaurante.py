@@ -6,6 +6,7 @@ from bebidas import BebidasNaoAlcoolicas
 from bebidasalcoolicas import BebidasAlcoolicas
 from sobremesa import Sobremesas
 from menu import MenuChefe
+from carrinho import Carrinho
 
 class Restaurante():
   def __init__(self, usuario) -> None:
@@ -29,6 +30,8 @@ class Restaurante():
   def menu(self):
     MenuChefe().start_ent()
 
+  def carrinho(self):
+    Carrinho().criarTelaCarrinho()
   def start_res(self):
     root = Tk()
     root.title("Restaurante do Ederson")
@@ -66,6 +69,9 @@ class Restaurante():
 
     menu = ttk.Button(root, text="Menu do Chef", width=50, padding=10, command=self.menu)
     menu.place(relx=0.5, rely=0.60, anchor=CENTER)
+
+    carrinho = ttk.Button(root, text="Carrinho", width=50, padding=10, command=self.carrinho)
+    carrinho.place(relx=0.5, rely=0.65, anchor=CENTER)
 
     root.mainloop()
 

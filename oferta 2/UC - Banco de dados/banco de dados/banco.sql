@@ -230,11 +230,11 @@ select NOMEVEND from VENDEDOR where VENDEDOR.SALARIO = (select min(SALARIO) from
 -- Qual pedido teve a maior venda em quantidade? 
 select max(QTDADE) from ITEMPEDIDO join ITEMPEDIDO.CODPROD = PRODUTO.CODPROD;
 -- Qual pedido teve a menor venda em quantidade? 
-select min(QTDADE) from ITEMPEDIDO;
+select min(QTDADE) from ITEMPEDIDO join ITEMPEDIDO.CODPROD = PRODUTO.CODPROD;
 -- Qual o produto mais barato?
-select min(VALOR_UN) from PRODUTO; 
+select DESCRICAO, VALOR_UN from PRODUTO where PRODUTO.VALOR_UN = (select min(VALOR_UN) from PRODUTO); 
 -- Qual o produto mais caro?
-select max(VALOR_UN) from PRODUTO;  
+select DESCRICAO, VALOR_UN from PRODUTO where PRODUTO.VALOR_UN = (select max(VALOR_UN) from PRODUTO); 
 -- Quantos vendedores existem no setor de ferramentas?
 select count(CODVEND) from VENDEDOR where VENDEDOR.CODSETOR = "4"; 
 -- Quantos pedidos o cliente Estevan Pereira Cardoso fez?

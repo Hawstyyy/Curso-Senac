@@ -1,6 +1,11 @@
-
+drop database brasil;
 create database brasil;
 use brasil;
+
+create table estado_civil(
+	id_estado_civil int auto_increment primary key,
+    estado_civil varchar(100) not null
+);
 
 create table escolaridade(
   id_escolaridade int auto_increment primary key,
@@ -44,6 +49,8 @@ create table cadastro_de_cliente(
   fone varchar(100) not null,
   id_raca int not null,
   id_escolaridade int not null,
+  id_estado_civil int not null,
+  foreign key fk_estado_civil(id_estado_civil) references estado_civil(id_estado_civil),
   foreign key fk_cidade(id_cidade) references cidade(id_cidade),
   foreign key fk_sexo(id_sexo) references sexo(id_sexo),
   foreign key fk_nacionalidade(id_nacionalidade) references nacionalidade(id_nacionalidade),
@@ -238,6 +245,10 @@ insert into sexo(sexo) values("Masculino"),
 ("Feminino"),
 ("Outro");
 
+insert into estado_civil(estado_civil) values ("Solteiro"),
+("Casado"),
+("Viúvo");
+
 insert into nacionalidade(nacionalidade) values ("Brasileira"),
 ("Estrangeira");
 
@@ -256,29 +267,29 @@ INSERT INTO escolaridade(escolaridade) VALUES("Ensino Fundamental Incompleto"),
 ("Superior Completo"),
 ("Pós-Graduação");
 
-INSERT INTO cadastro_de_cliente(CPF, nome, RG, id_cidade, id_sexo, id_nacionalidade, fone, id_raca, id_escolaridade) VALUES
-("123.456.789-00", "Ana Silva", "MG-12.345.678", 1, 2, 1, "(11) 98765-4321", 2, 2),
-("234.567.890-01", "Carlos Souza", "SP-23.456.789", 2, 1, 1, "(21) 91234-5678", 1, 4),
-("345.678.901-12", "Maria Oliveira", "RJ-34.567.890", 3, 2, 1, "(31) 92345-6789", 3, 6),
-("456.789.012-23", "João Santos", "BA-45.678.901", 4, 1, 1, "(41) 93456-7890", 1, 5),
-("567.890.123-34", "Fernanda Costa", "PR-56.789.012", 5, 2, 1, "(51) 94567-8901", 2, 3),
-("678.901.234-45", "Roberto Lima", "CE-67.890.123", 6, 1, 1, "(61) 95678-9012", 4, 7),
-("789.012.345-56", "Lucia Almeida", "RS-78.901.234", 7, 2, 1, "(71) 96789-0123", 3, 8),
-("890.123.456-67", "Pedro Pereira", "MG-89.012.345", 8, 1, 1, "(81) 97890-1234", 5, 2),
-("901.234.567-78", "Juliana Martins", "SP-90.123.456", 9, 2, 1, "(91) 98901-2345", 2, 4),
-("012.345.678-90", "Felipe Ferreira", "RJ-01.234.567", 10, 1, 1, "(11) 99123-4567", 1, 6),
-("123.456.789-01", "Larissa Rocha", "BA-12.345.678", 11, 2, 1, "(21) 99234-5678", 3, 5),
-("234.567.890-12", "André Oliveira", "PR-23.456.789", 12, 1, 1, "(31) 99345-6789", 4, 8),
-("345.678.901-23", "Tatiane Souza", "SP-34.567.890", 13, 2, 1, "(41) 99456-7890", 1, 2),
-("456.789.012-34", "Gustavo Lima", "CE-45.678.901", 14, 1, 1, "(51) 99567-8901", 2, 3),
-("567.890.123-45", "Renata Carvalho", "RJ-56.789.012", 15, 2, 1, "(61) 99678-9012", 3, 7),
-("678.901.234-56", "Marcelo Rodrigues", "BA-67.890.123", 16, 1, 1, "(71) 99789-0123", 4, 4),
-("789.012.345-67", "Sofia Martins", "PR-78.901.234", 17, 2, 1, "(81) 99890-1234", 5, 6),
-("890.123.456-78", "Ricardo Mendes", "SP-89.012.345", 18, 1, 1, "(91) 99901-2345", 1, 5),
-("901.234.567-89", "Camila Pereira", "RJ-90.123.456", 19, 2, 1, "(11) 98876-5432", 2, 7),
-("012.345.678-01", "Diego Costa", "BA-01.234.567", 20, 1, 1, "(21) 98765-4321", 3, 8),
-("123.456.789-12", "Juliana Costa", "PR-12.345.678", 21, 2, 1, "(31) 97654-3210", 4, 4),
-("234.567.890-23", "Eduardo Santos", "SP-23.456.789", 22, 1, 1, "(41) 96543-2109", 5, 6);
+INSERT INTO cadastro_de_cliente(CPF, nome, RG, id_cidade, id_sexo, id_nacionalidade, fone, id_raca, id_escolaridade, id_estado_civil) VALUES
+("123.456.789-00", "Ana Silva", "MG-12.345.678", 1, 2, 1, "(11) 98765-4321", 2, 2, 1),
+("234.567.890-01", "Carlos Souza", "SP-23.456.789", 2, 1, 1, "(21) 91234-5678", 1, 4, 2),
+("345.678.901-12", "Maria Oliveira", "RJ-34.567.890", 3, 2, 1, "(31) 92345-6789", 3, 6, 3),
+("456.789.012-23", "João Santos", "BA-45.678.901", 4, 1, 1, "(41) 93456-7890", 1, 5, 1),
+("567.890.123-34", "Fernanda Costa", "PR-56.789.012", 5, 2, 1, "(51) 94567-8901", 2, 3, 2),
+("678.901.234-45", "Roberto Lima", "CE-67.890.123", 6, 1, 1, "(61) 95678-9012", 4, 7, 3),
+("789.012.345-56", "Lucia Almeida", "RS-78.901.234", 7, 2, 1, "(71) 96789-0123", 3, 8, 1),
+("890.123.456-67", "Pedro Pereira", "MG-89.012.345", 8, 1, 1, "(81) 97890-1234", 5, 2, 2),
+("901.234.567-78", "Juliana Martins", "SP-90.123.456", 9, 2, 1, "(91) 98901-2345", 2, 4, 3),
+("012.345.678-90", "Felipe Ferreira", "RJ-01.234.567", 10, 1, 1, "(11) 99123-4567", 1, 6, 1),
+("123.456.789-01", "Larissa Rocha", "BA-12.345.678", 11, 2, 1, "(21) 99234-5678", 3, 5, 2),
+("234.567.890-12", "André Oliveira", "PR-23.456.789", 12, 1, 1, "(31) 99345-6789", 4, 8, 3),
+("345.678.901-23", "Tatiane Souza", "SP-34.567.890", 13, 2, 1, "(41) 99456-7890", 1, 2, 1),
+("456.789.012-34", "Gustavo Lima", "CE-45.678.901", 14, 1, 1, "(51) 99567-8901", 2, 3, 2),
+("567.890.123-45", "Renata Carvalho", "RJ-56.789.012", 15, 2, 1, "(61) 99678-9012", 3, 7, 3),
+("678.901.234-56", "Marcelo Rodrigues", "BA-67.890.123", 16, 1, 1, "(71) 99789-0123", 4, 4, 1),
+("789.012.345-67", "Sofia Martins", "PR-78.901.234", 17, 2, 1, "(81) 99890-1234", 5, 6, 2),
+("890.123.456-78", "Ricardo Mendes", "SP-89.012.345", 18, 1, 1, "(91) 99901-2345", 1, 5, 3),
+("901.234.567-89", "Camila Pereira", "RJ-90.123.456", 19, 2, 1, "(11) 98876-5432", 2, 7, 1),
+("012.345.678-01", "Diego Costa", "BA-01.234.567", 20, 1, 1, "(21) 98765-4321", 3, 8, 2),
+("123.456.789-12", "Juliana Costa", "PR-12.345.678", 21, 2, 1, "(31) 97654-3210", 4, 4, 3),
+("234.567.890-23", "Eduardo Santos", "SP-23.456.789", 22, 1, 1, "(41) 96543-2109", 5, 6, 1);
 
 select nome, cidade from cadastro_de_cliente join cidade on cadastro_de_cliente.id_cidade = cidade.id_cidade;
 select nome, estado from cadastro_de_cliente join estado on cadastro_de_cliente.id_cidade = estado.id_estado;
@@ -293,3 +304,26 @@ join estado on cadastro_de_cliente.id_cidade = estado.id_estado
 join raca on cadastro_de_cliente.id_raca = raca.id_raca
 join nacionalidade on cadastro_de_cliente.id_nacionalidade = nacionalidade.id_nacionalidade
 join escolaridade on cadastro_de_cliente.id_escolaridade = escolaridade.id_escolaridade;
+
+-- atividade dia 04/09
+SET SQL_SAFE_UPDATES = 0;
+-- Se a letra da cidade começar de A até M, Mudar o nome da cidade para “Abaixo de M”, e de M até o final do alfabeto mudar o nome para “Acima de M”;
+update cidade set cidade="Abaixo de M" where cidade < "M";
+update cidade set cidade="Acima de M" where cidade > "M";
+
+-- Os estados, deixaremos de utilizar seu nome, e sim sua região, então verifique a região do estado e altere, ex.: se o estado for Mato Grosso do Sul, você irá alterar o nome para “Centro Oeste”;
+update estado set estado="Centro-Oeste" where estado="Mato Grosso do Sul" or estado ="Mato Grosso" or estado = "Goiás";
+update estado set estado="Norte" where estado="Amapá" or estado="Amazonas" or estado ="Pará" or estado="Rondônia" or estado="Roraima" or estado="Tocantins" or estado="Acre";
+update estado set estado="Nordeste" where estado="Alagoas" or estado="Bahia" or estado ="Ceará" or estado="Maranhão" or estado="Paraíba" or estado="Pernambuco" or estado="Piauí" or estado="Rio Grande do Norte" or estado="Sergipe";
+update estado set estado="Sudeste" where estado="Espírito Santo" or estado="Minas Gerais" or estado="Rio de Janeiro" or estado="São Paulo";
+update estado set estado="Sul" where estado="Paraná" or estado="Rio Grande do Sul" or estado="Santa Catarina";
+
+-- Na nacionalidade, alterar estrangeiro para “Fora do Brasil”;
+update nacionalidade set nacionalidade="Fora do Brasil" where nacionalidade="Estrangeira";
+
+-- Nas raças, alterar para “seres humanos”;
+update raca set raca="Seres humanos" where raca="Indígena" or raca="Preto" or raca="Pardo" or raca="Branco" or raca="Amarelo";
+
+-- Na escolaridade mudaremos o padrão, tudo que for ensino fundamental ou médio, será alterado para “ensino básico”, e o que for de graduação para cima, será alterado para “ensino avançado”.
+update escolaridade set escolaridade="Ensino básico" where escolaridade="Ensino Fundamental Completo" or escolaridade="Ensino Fundamental Incompleto" or escolaridade ="Ensino Médio Incompleto" or escolaridade="Ensino Médio Completo";
+update escolaridade set escolaridade="Ensino avançado" where escolaridade="Superior Incompleto" or escolaridade="Superior Completo" or escolaridade="Pós-Graduação";

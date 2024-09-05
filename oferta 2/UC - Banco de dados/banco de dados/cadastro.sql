@@ -119,9 +119,8 @@
 
 
   -- # Adicione um 9 a mais no telefone
-update telefone_cliente set telefone_cliente="9" where telefone_cliente like "%9";
-
+  -- arquivo python
   -- # A cidade de Curitiba agora fará parte do estado do RJ
 update cidade set id_estado=2 where nome_cidade="Curitiba";
   -- # altere o domínio do cliente 20 ao 45, substitua @exemplo.com para @teste.com
-update cliente set email_cliente="@teste.com"
+  -- arquivo python

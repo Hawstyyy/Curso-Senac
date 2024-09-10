@@ -3,7 +3,6 @@ from PIL import Image
 import os, sys
 from connect import Connect, signUser
 
-
 class Cadastro:
   def __init__(self) -> None:
     pass

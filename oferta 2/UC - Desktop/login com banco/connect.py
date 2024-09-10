@@ -38,4 +38,4 @@ def signUser(user, password):
   else:
     cursor.execute(f"insert into users(nome, senha) values ('{user}', '{password}');")
     conn.commit()
-    messagebox.showinfo("Sucesso", f"Bem-vindo ao Senac! Sinta-se livre para logar agora! ")
+    messagebox.showinfo("Sucesso", f"Bem-vindo ao Senac! Sinta-se livre para logar agora!")

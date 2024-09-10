@@ -2,6 +2,7 @@ import customtkinter as CTk
 from PIL import Image
 import os, sys
 from connect import Connect,getUsers
+from cadastro import Cadastro
 
 def basePath():
   return os.path.dirname(os.path.abspath(sys.argv[0]))
@@ -13,13 +14,18 @@ def entrada(root, text, width, fg, textcolor, pady):
 
 def Submit(user, password, user_text):
   Connect()
-  getUsers(user.get(), password.get())
+  if getUsers(user.get(), password.get(), user_text.get()):
+    root.destroy()
+    Cadastro().startApp()
+  else:
+    root.destroy()
 
 
 root = CTk.CTk()
 root.geometry("600x500")
 root.title("Login")
 root.resizable(False, False)
+root.iconbitmap(f'{basePath()}/Senac_logo.ico')
 
 logo = CTk.CTkImage(Image.open(f'{basePath()}/Senac_logo.png'), size=(150, 100))
 logo_label = CTk.CTkLabel(root, image=logo, text="")

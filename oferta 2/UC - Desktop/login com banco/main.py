@@ -3,13 +3,7 @@ from PIL import Image
 import os, sys
 from connect import Connect,getUsers
 from cadastro import Cadastro
-
-  # def Donwload(self, url):
-  #     download = requests.get(url.get())
-  #     print("Sucesso")
-  #     filename = url.get().split('/')[-1]
-  #     with open(filename, 'wb') as file:
-  #       file.write(download.content)
+from perfil import Perfil
 
 def basePath():
   return os.path.dirname(os.path.abspath(sys.argv[0]))
@@ -19,21 +13,21 @@ def entrada(root, text, width, fg, textcolor, pady):
   entry.pack(pady=pady)
   return entry
 
-def Submit(user, password, user_text):
+def Submit(user, password, user_text, url, main):
   Connect()
-  if getUsers(user.get(), password.get(), user_text.get()):
-    root.destroy()
-    Cadastro().startApp()
+  nome = user.get()
+  texto = user_text.get()
+  url1 = url.get()
+  if getUsers(nome, password.get(), texto, url1):
+    root.iconify()
+    Cadastro().startApp(main)
   else:
     root.destroy()
-
-def pedirLink(root):
-  from cadastroImagem import CadastroImagem
-  root.iconify()
-  CadastroImagem().startApp(root)
+    Perfil().startApp(nome, texto, url1)
 
 root = CTk.CTk()
-root.geometry("600x500")
+main = root
+root.geometry("600x600")
 root.title("Login")
 root.resizable(False, False)
 root.iconbitmap(f'{basePath()}/Senac_logo.ico')
@@ -49,10 +43,9 @@ user = entrada(root, "Insira seu usuário", 350, "white", "black", 10)
 password = entrada(root, "Insira sua senha", 350, "white", "black", 10)
 
 user_text = entrada(root, "Insira seu texto", 350, "white", "black", 10)
-user_image = CTk.CTkButton(root, text="Inserir imagem", command=lambda: pedirLink(root), corner_radius=20)
-user_image.pack()
+url = entrada(root, 'Insira o link de sua imagem', 350, 'white', 'black', 10)
 
-submit = CTk.CTkButton(root, text="Fazer Login", command= lambda: Submit(user, password, user_text), corner_radius=20)
+submit = CTk.CTkButton(root, text="Fazer Login", command= lambda: Submit(user, password, user_text, url, main), corner_radius=20)
 submit.pack(pady=30)
 
 root.mainloop()

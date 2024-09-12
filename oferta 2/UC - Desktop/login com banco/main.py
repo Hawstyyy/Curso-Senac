@@ -1,6 +1,7 @@
 import customtkinter as CTk
 from PIL import Image
 import os, sys
+from tkinter import filedialog
 from connect import Connect,getUsers
 from cadastro import Cadastro
 
@@ -19,7 +20,6 @@ def Submit(user, password, user_text):
     Cadastro().startApp()
   else:
     root.destroy()
-
 
 root = CTk.CTk()
 root.geometry("600x500")

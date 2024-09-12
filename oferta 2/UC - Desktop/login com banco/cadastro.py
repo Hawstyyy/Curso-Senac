@@ -15,12 +15,15 @@ class Cadastro:
     entry.pack(pady=pady)
     return entry
   
-  def Submit(self, user, password):
+  def Submit(self, user, password, main):
     Connect()
     signUser(user.get(), password.get())
+    root.destroy()
+    main.deiconify()
 
-  def startApp(self):
-    root = CTk.CTk()
+  def startApp(self, main):
+    global root
+    root = CTk.CTkToplevel()
     root.geometry("600x500")
     root.title("Login")
     root.resizable(False, False)
@@ -36,7 +39,7 @@ class Cadastro:
     user = self.Entrada(root, "Insira seu usuário", 350, "white", "black", 10)
     password = self.Entrada(root, "Insira sua senha", 350, "white", "black", 10)
 
-    submit = CTk.CTkButton(root, text="Fazer Cadastro", command= lambda: self.Submit(user, password))
+    submit = CTk.CTkButton(root, text="Fazer Cadastro", command= lambda: self.Submit(user, password, main))
     submit.pack(pady=30)
     root.mainloop()
 

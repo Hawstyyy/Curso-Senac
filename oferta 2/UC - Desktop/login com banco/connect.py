@@ -1,5 +1,6 @@
 import mysql.connector as sql
 from tkinter import messagebox
+import requests, os, sys
 
 def Connect():
   global conn
@@ -14,7 +15,10 @@ def Connect():
   else:
     print("Foi nao pae")
 
-def getUsers(user, password, user_text):
+def basePath():
+  return os.path.dirname(os.path.abspath(sys.argv[0]))
+
+def getUsers(user, password, user_text, url):
   cursor = conn.cursor(dictionary=True)
   cursor.execute(f"select senha from users where nome = '{user}';")
   rows = cursor.fetchone()
@@ -23,9 +27,13 @@ def getUsers(user, password, user_text):
       if password != value:
         messagebox.showerror("Erro", "Senha Incorreta")
       else:
-        cursor.execute(f"update users set texto = '{user_text}' where nome = '{user}'")
+        cursor.execute(f"update users set texto = '{user_text}', image = '{url}' where nome = '{user}'")
         conn.commit()
-        messagebox.showinfo("Sucesso", f"Bem-vindo ao Senac! o seu texto adicionado foi: {user_text}")
+        messagebox.showinfo("Sucesso", f"Bem-vindo ao Senac! Abrindo seu perfil...")
+        download = requests.get(url)
+        filename = url.split('/')[-1]
+        with open(f'{basePath()}/{filename}', 'wb') as file:
+          file.write(download.content)
   else:
     return messagebox.askokcancel("Erro","Usuário não encontrado, gostaria de cadastrar um?")
 

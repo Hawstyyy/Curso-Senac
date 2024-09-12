@@ -1,9 +1,9 @@
 import customtkinter as CTk
 from PIL import Image
 import os, sys
-from tkinter import filedialog
 from connect import Connect,getUsers
 from cadastro import Cadastro
+from perfil import Perfil
 
 def basePath():
   return os.path.dirname(os.path.abspath(sys.argv[0]))
@@ -13,16 +13,21 @@ def entrada(root, text, width, fg, textcolor, pady):
   entry.pack(pady=pady)
   return entry
 
-def Submit(user, password, user_text):
+def Submit(user, password, user_text, url, main):
   Connect()
-  if getUsers(user.get(), password.get(), user_text.get()):
-    root.destroy()
-    Cadastro().startApp()
+  nome = user.get()
+  texto = user_text.get()
+  url1 = url.get()
+  if getUsers(nome, password.get(), texto, url1):
+    root.iconify()
+    Cadastro().startApp(main)
   else:
     root.destroy()
+    Perfil().startApp(nome, texto, url1)
 
 root = CTk.CTk()
-root.geometry("600x500")
+main = root
+root.geometry("600x600")
 root.title("Login")
 root.resizable(False, False)
 root.iconbitmap(f'{basePath()}/Senac_logo.ico')
@@ -36,9 +41,11 @@ texto.pack()
 
 user = entrada(root, "Insira seu usuário", 350, "white", "black", 10)
 password = entrada(root, "Insira sua senha", 350, "white", "black", 10)
-user_text = entrada(root, "Insira seu texto", 350, "white", "black", 10)
 
-submit = CTk.CTkButton(root, text="Fazer Login", command= lambda: Submit(user, password, user_text))
+user_text = entrada(root, "Insira seu texto", 350, "white", "black", 10)
+url = entrada(root, 'Insira o link de sua imagem', 350, 'white', 'black', 10)
+
+submit = CTk.CTkButton(root, text="Fazer Login", command= lambda: Submit(user, password, user_text, url, main), corner_radius=20)
 submit.pack(pady=30)
 
 root.mainloop()

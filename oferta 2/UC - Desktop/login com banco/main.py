@@ -1,9 +1,15 @@
 import customtkinter as CTk
 from PIL import Image
 import os, sys
-from tkinter import filedialog
 from connect import Connect,getUsers
 from cadastro import Cadastro
+
+  # def Donwload(self, url):
+  #     download = requests.get(url.get())
+  #     print("Sucesso")
+  #     filename = url.get().split('/')[-1]
+  #     with open(filename, 'wb') as file:
+  #       file.write(download.content)
 
 def basePath():
   return os.path.dirname(os.path.abspath(sys.argv[0]))
@@ -21,6 +27,11 @@ def Submit(user, password, user_text):
   else:
     root.destroy()
 
+def pedirLink(root):
+  from cadastroImagem import CadastroImagem
+  root.iconify()
+  CadastroImagem().startApp(root)
+
 root = CTk.CTk()
 root.geometry("600x500")
 root.title("Login")
@@ -36,9 +47,12 @@ texto.pack()
 
 user = entrada(root, "Insira seu usuário", 350, "white", "black", 10)
 password = entrada(root, "Insira sua senha", 350, "white", "black", 10)
-user_text = entrada(root, "Insira seu texto", 350, "white", "black", 10)
 
-submit = CTk.CTkButton(root, text="Fazer Login", command= lambda: Submit(user, password, user_text))
+user_text = entrada(root, "Insira seu texto", 350, "white", "black", 10)
+user_image = CTk.CTkButton(root, text="Inserir imagem", command=lambda: pedirLink(root), corner_radius=20)
+user_image.pack()
+
+submit = CTk.CTkButton(root, text="Fazer Login", command= lambda: Submit(user, password, user_text), corner_radius=20)
 submit.pack(pady=30)
 
 root.mainloop()

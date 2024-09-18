@@ -20,4 +20,9 @@ select * from titanic_base;
 -- Quantas pessoas sobreviveram?
 select count(*) from titanic_base where survived = 1;
 -- Quantas crianças abaixo de 12 anos sobrevivera?
-select count(*) from titanic_base where survived = 1 and age <= 12;
+select count(*) from titanic_base where survived = 1 and age < 12;
+-- Quantas mulheres sobreviveram?
+select count(*) from titanic_base where Sex = 'female' and survived = 1;
+-- Quantos homens sobreviveram?
+select count(*) from titanic_base where Sex = 'male' and survived = 1;
+-- 

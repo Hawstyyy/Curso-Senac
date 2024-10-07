@@ -1,12 +1,17 @@
 import pandas as pd
 import os, sys
 
+archives = []
+
 def basePath():
   return os.path.dirname(os.path.abspath(sys.argv[0]))
 
 def Save(query, nome):
   parameter = df.query(query)
-  parameter.to_csv(f'{basePath()}/{nome}', sep=';',index=False, encoding='utf-8-sig')
+  try:
+    parameter.to_csv(f'{basePath()}/datasets/{nome}', sep=';',index=False, encoding='utf-8-sig')
+  except Exception as err:
+    print("erro: ", err)
 
 df = pd.read_csv(f'https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv')
 df.set_index('PassengerId', inplace=True)

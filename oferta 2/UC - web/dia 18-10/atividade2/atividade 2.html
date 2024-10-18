@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+</head>
+<body>
+  <h1>Cadastro de Usuário</h1>
+  <fieldset> <legend>Dados pessoais</legend>
+    <form action="./page.php">
+
+      <label for="fname">Nome</label><br>
+      <input type="text" id="fnome" placeholder="Insira o seu primeiro nome"><br>
+
+      <label for="fname">Nome do meio</label><br>
+      <input type="text" id="fnome" placeholder="Insira o seu nome do meio"><br>
+
+      <label for="fname">Último Nome</label><br>
+      <input type="text" id="fnome" placeholder="Insira o seu último nome"><br>
+  </fieldset>
+  <fieldset> <legend>Qual sua linguagem favorita</legend>
+    <input type="radio" name="fav_language" id="HTML" value="html" checked>
+    <label for="HTML">HTML</label><br>
+
+    <input type="radio" name="fav_language" id="CSS" value="css">
+    <label for="CSS">CSS</label><br>
+
+    <input type="radio" name="fav_language" id="javascript" value="javascript">
+    <label for="javascript">JavaScript</label>
+  </fieldset>
+  <fieldset> <legend>Dados para login</legend>
+      <label for="email">E-mail</label><br>
+      <input type="email" name="email" id="email" placeholder="Insira o seu email"><br>
+
+      <label for="senha">Senha</label><br>
+      <input type="password" name="senha" id="senha" placeholder="Insira a sua senha"><br>
+
+      <label for="data_nasc">Data de nascimento:</label><br>
+      <input type="date" name="data_nasc" id="data_nasc"><br>
+  </fieldset>
+  <fieldset><legend>Dados adicionais</legend>
+      <label for="cor">Cor favorita</label><br>
+      <input type="color" name="cor_fav" id="cor"><br>
+
+      <label for="idade">Idade</label><br>
+      <input type="number" id="idade"><br>
+
+      <label for="genero">Gênero</label><br>
+      <input type="radio" name="genero" id="genero" value="Masculino">
+      <label for="genero">Masculino</label><br>
+
+      <input type="radio" name="genero" id="genero" value="Feminino">
+      <label for="genero">Feminino</label><br>
+
+      <label for="fav_time">Escolha os seus times favoritos</label><br>
+      <input type="checkbox" name="fav_time" id="flamengo" value="flamengo">
+      <label for="flamengo">Flamengo</label><br>
+
+      <input type="checkbox" name="fav_time" id="palmeiras" value="palmeiras">
+      <label for="palmeiras">Palmeiras</label><br>
+
+      <input type="checkbox" name="fav_time" id="corinthias" value="corinthias">
+      <label for="corinthias">Corinthias</label><br>
+
+      <label for="dropdown">País de origem</label><br>
+      <select name="dropdown" id="dropdown">
+        <option value="Brasil">Brasil</option>
+        <option value="EUA">EUA</option>
+        <option value="Argentina">Argentina</option>
+      </select><br>
+
+      <label for="pfp">Envie sua foto de perfil</label><br>
+      <input type="file" name="pfp" id="pfp"><br>
+
+      <label for="search">Pesquisar algo</label><br>
+      <input type="search" name="pesquisar" id="pesquisar" placeholder="Buscar..."><br>
+
+      <button type="submit">Cadastrar</button>
+      <button type="reset">Limpar formulário</button>
+    </form>
+  </fieldset>
+</body>
+</html>

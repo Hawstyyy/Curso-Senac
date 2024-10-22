@@ -9,13 +9,16 @@ class Animal:
     print(f'O animal {self.nome} respirou')
 
   def seReproduzir(self):
-    print(f'O animal {self.nome} se reproduzido')
+    print(f'O animal {self.nome} se reproduziu')
 
 class Vertebrados(Animal):
   def __init__(self, nome, nome_cien, alimentacao, reproducao, esqueleto, coluna):
     super().__init__(nome, nome_cien, alimentacao, reproducao)
     self.esqueleto = esqueleto
     self.coluna = coluna
+
+  def seMover(self):
+    print(f'O animal {self.nome} se moveu')
 
 class Mamiferos(Vertebrados):
   def __init__(self, nome, nome_cien, alimentacao, reproducao, esqueleto, coluna, mamarias, endotermicos):

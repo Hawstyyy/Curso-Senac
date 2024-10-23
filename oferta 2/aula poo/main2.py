@@ -1,10 +1,14 @@
 class Usuario:
+  max_emprestimo = 3
   def __init__(self,nome, senha, email, telefone):
     self.nome = nome
     self.senha = senha
     self.email = email
     self.telefone = telefone
-    self.max_emprestimo = 0
+    self.lista_livros = []
+  
+  def pegar_emprestado(self,livro):
+    if len(self.lista_livros) == self.max_emprestimo:
 
 class Livro:
   def __init__(self, titulo, autor, genero, disponivel):

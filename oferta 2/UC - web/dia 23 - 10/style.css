@@ -1,0 +1,124 @@
+html {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(211,231,234,1), rgba(77,181,200,1)); 
+}
+
+div {
+  position: relative;
+  display: inline-block;
+  width: 228px;
+  box-shadow: 0px 25px 20px 0px rgba(0,0,0,0.6);
+  border-radius: 20px;
+}
+
+.mona1 {
+  margin-top: 50px;
+  left: 5%;
+}
+
+.mona2 {
+  left: 120px;
+}
+
+.mona3 {
+  left: 145px;
+}
+
+.mona4 {
+  left: 170px;
+}
+
+.mona5 {
+  left: 195px;
+}
+
+img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.lorem {
+  color: lightblue;
+  box-sizing: border-box;
+  width: 228px;
+  margin: 0px;
+  margin-top: -4px;
+  padding: 20px;
+  background-color: #2a31f0;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: justify;
+}
+
+.lorem2 {
+  font-size: 1rem;
+  color: red;
+  box-sizing: border-box;
+  width: 228px;
+  margin: 0px;
+  margin-top: -4px;
+  padding: 20px;
+  background-color: #add8e6;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: justify;
+}
+
+.lorem3 {
+  font-size: 1rem;
+  color: #008000;
+  box-sizing: border-box;
+  width: 228px;
+  margin: 0px;
+  margin-top: -4px;
+  padding: 20px;
+  background-color: #5f9ea0;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: justify;
+}
+
+.lorem4 {
+  font-size: 1rem;
+  color: #40e0b7;
+  box-sizing: border-box;
+  width: 228px;
+  margin: 0px;
+  margin-top: -4px;
+  padding: 20px;
+  background-color: #ff7f50;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: justify;
+}
+
+.lorem5 {
+  font-size: 1rem;
+  color: #808064;
+  box-sizing: border-box;
+  width: 228px;
+  margin: 0px;
+  margin-top: -4px;
+  padding: 20px;
+  background-color: #7c1719;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: justify;
+}
+

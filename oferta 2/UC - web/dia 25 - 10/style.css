@@ -1,0 +1,31 @@
+body {
+  background-color: blanchedalmond;
+  height: 100vh;
+  transition-duration: 0.4s;
+}
+
+/* body:hover{
+  background-color: aqua;
+}
+
+body:active{
+  background-color: blueviolet;
+} */
+
+.grid-container {
+  width: 400px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  gap: 20px;
+}
+
+.grid-item {
+  padding: 10px;
+  border: 2px whitesmoke dashed;
+  background-color:darkorchid;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 20px;
+}

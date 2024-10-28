@@ -1,5 +1,6 @@
 html {
   height: 100%;
+  width: 100%;
 }
 
 body {
@@ -8,13 +9,21 @@ body {
   height: 100%;
 }
 
+main {
+  margin-top: 100px;
+}
+
 nav {
-  overflow: hidden;
+  position: fixed;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto;
   color: white;
   height: 100px;
+  width: 100%;
+  z-index: 1000;
   background-color: black;
+  top: 0;
+  left: 0;
 }
 
 .logo {
@@ -33,20 +42,19 @@ nav a {
 }
 
 .fundo {
-  
   background-image: url('./assets/image/photo-1517976487492-5750f3195933.jfif');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 853px;
+  height: 90vh;
 }
 
 .landing {
   backdrop-filter: blur(10px);
   color: white;
   display: grid;
-  height: 853px;
+  height: 90vh;
   justify-content: center;
 }
 
@@ -92,6 +100,7 @@ nav a {
   position: relative;
   margin-top: 3%;
   left: 5%;
+  width: 500px;
 }
 
 .news{
@@ -126,6 +135,7 @@ nav a {
   color: white;
   top: 5%;
   left: 5%;
+  width: 500px;
 }
 
 .espaco {
@@ -135,12 +145,12 @@ nav a {
   background-repeat: no-repeat;
   margin-top: 5%;
   width: 100%;
-  height: 853px;
+  height: 90vh;
 }
 
 .blur {
   width: 100%;
-  height: 853px;
+  height: 90vh;
   backdrop-filter: blur(3px);
 }
 
@@ -160,4 +170,117 @@ nav a {
   margin-top: 10%;
   color: white;
   display: block;
+}
+
+.climaeterra {
+  background-image: url('./assets/image/GettyImages-1228431015-scaled.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 90vh;
+}
+
+.climaeterra h1 {
+  color: white;
+  position: relative;
+  top: 5%;
+  left: 5%;
+  width: 500px;
+  margin: 0;
+}
+
+.text-clima {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 700px;
+  margin-top: 17%;
+  color: white;
+  display: block;
+}
+
+.nasa {
+  background-image: url('./assets/image/wp10567920.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 90vh;
+}
+
+.nasa h1 {
+  color: white;
+  position: relative;
+  top: 5%;
+  left: 5%;
+  width: 500px;
+  margin: 0;
+}
+
+.text-nasa {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 700px;
+  margin-top: 17%;
+  color: white;
+  display: block;
+}
+
+footer {
+  background-image: url('./assets/image/photo-1719859061156-d3d762d2cf20.jfif');
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+  border-top: rgba(255, 255, 255, 0.808) solid 5px;
+}
+
+footer p{
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  position: relative;
+}
+
+.logo-footer {
+  display: inline-block;
+  position: relative;
+  margin-top: 5%;
+  grid-column: 1;
+  left: 40%;
+}
+
+.block1 {
+  grid-column: 1;
+  margin-top: 2%;
+}
+
+.block2 {
+  position: relative;
+  grid-column: 1;
+  top: 3%;
+}
+
+.block3 {
+  grid-column: 2;
+  margin-top: -22%;
+}
+
+.block4 {
+  grid-column: 2;
+  margin-top: -20%;
+}
+
+.block5 {
+  grid-column: 2;
+  margin-top: -15%;
+}
+
+.block6 {
+  grid-column: 2;
+  margin-top: -10%;
+  margin-bottom: 25%;
 }

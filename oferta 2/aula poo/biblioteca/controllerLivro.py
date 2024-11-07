@@ -4,9 +4,29 @@ import mysql.connector
 
 class controllerLivro:
   def inserirLivro(self):
-    db = Database()
+    db = Database('10.28.2.16','suporte','suporte','biblioteca')
     db.conectar()
-    db.executarQuery(Livro('tete','teste','testando', 123).inserirLivro())
+    query = Livro('teste','teste','testando', 123).inserirLivro()
+    db.executarQuery(query)
+    db.desconectar()
+  
+  def visualizarLivro(self):
+    db = Database('10.28.2.16','suporte','suporte','biblioteca')
+    db.conectar()
+    query = Livro('teste','teste','testando', 123).visualizarLivro()
+    visu = db.visualizarQuery(query)
+    for x in visu:
+      print(f'Livro: {x}')
     db.desconectar()
 
-controllerLivro().inserirLivro()
+  def atualizarLivro(self):
+    db = Database('10.28.2.16','suporte','suporte','biblioteca')
+    db.conectar()
+    query = Livro('teste','teste','testando', 123).updateLivro('teste', 'enzo', 'autor = "teste"')
+    db.executarQuery(query)
+    db.desconectar()
+
+# controllerLivro().inserirLivro()
+controllerLivro().visualizarLivro()
+controllerLivro().atualizarLivro()
+controllerLivro().visualizarLivro()

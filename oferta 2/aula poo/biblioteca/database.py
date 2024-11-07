@@ -6,26 +6,23 @@ class Database:
     self.user = user
     self.senha = senha
     self.database = database
+    self.cursor = None
   
   def conectar(self):
-    try:
-      self.conexao = mysql.connector.connect(
-        host = self.host,
-        user = self.user,
-        password = self.senha,
-        database = self.database
-      )
+    self.conexao = mysql.connector.connect(
+      host = self.host,
+      user = self.user,
+      password = self.senha,
+      database = self.database
+    )
 
-      self.cursor = self.conexao.cursor()
+    self.cursor = self.conexao.cursor()
 
-      if self.conexao.is_connected():
-        print('Ta conectado')
-      
-      else:
+    if self.conexao.is_connected():
+      print('Ta conectado')
+    
+    else:
         print('Não ta conectado')
-
-    except:
-      print('Algo esta errado, tente novamente')
   
   def desconectar(self):
     self.conexao.close()
@@ -34,3 +31,7 @@ class Database:
     self.cursor.execute(msg)
     self.conexao.commit()
 
+  def visualizarQuery(self, msg):
+    self.cursor.execute(msg)
+    fetch = self.cursor.fetchall()
+    return fetch

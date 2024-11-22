@@ -52,3 +52,32 @@
 //   return p1 * p2
 // }
 // funcao(1,2)
+
+// window.onload = function(){
+//   let h1 = window.document.getElementsByTagName('h1')[0]
+//   console.log(h1)
+//   h1.style.background="blue"
+// };
+
+// window.onclick = function(){
+//   let h1 = window.document.getElementsByTagName('h1')[0]
+//   h1.innerText='boom'
+// };
+
+// window.ondblclick = function(){
+//   let h1 = window.document.getElementsByTagName('h1')[0]
+//   h1.innerText='bang'
+// };
+
+// function correto(){
+//   let a = window.document.getElementById('a')
+//   a.innerText = 'ta certo'
+//   a.style.backgroundColor = 'green'
+// };
+
+let i = 0;
+
+function add(){
+  let a = window.document.getElementsByTagName('button')[1]
+  a.innerText = `Clicou ${i++} vezes`
+};

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <style>
+    .span-required {
+      display: none;
+    }
+    .span-senha1, .span-senha2 {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="mainform">
+      <h1 class="main-text">Bem vindo! <br>Realize o seu cadastro</h1>
+      <form action="">
+        <input type="text" name="nome" id="nome" class="required" placeholder="Digite seu nome" required oninput="nameValidate()">
+        <span class="span-required" style="color: red;">O nome deve ter 3 caracteres</span>
+        <input type="password" placeholder="Digite sua senha" required class="required" oninput="senhaValidate1()">
+        <span class="span-required" style="color: red;">As senhas devem ser iguais e maiores que 8 caracteres</span>
+        <input type="password" placeholder="Digite sua senha novamente" required class="required" oninput="senhaValidate2()">
+        <span class="span-required" style="color: red;">As senhas devem ser iguais e maiores que 8 caracteres</span>
+        <button type="button" class="submit" id="submitar">Cadastrar</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

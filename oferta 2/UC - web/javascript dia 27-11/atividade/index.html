@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>e-SAJ</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <nav>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/2048px-Hamburger_icon_white.svg.png" alt="">
+    <h1 class="main_header_text"><b>e-SAJ</b> | Consulta de Processos de 1º Grau</h1>
+    <h1 class="TJMS">TJMS</h1>
+    <p class="identificar_header">Identificar-se</p>
+  </nav>
+  <main>
+    <div class="main_content">
+      <form action="">
+        <label for="select">Consultar por</label>
+        <select name="select" id="select">
+          <option value="NUMPROC">Número do Processo</option>
+        </select>
+        <input type="text" required class="input-required" oninput="numProcVerify()">
+        <span class="span-required">O formato inserido é inválido o seu formato correto é NNNNNNN-DD.AAAA.J.TR.OOOO</span>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

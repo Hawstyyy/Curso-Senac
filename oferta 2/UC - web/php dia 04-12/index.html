@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>atividade dia 04/12</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <script src="./script.js" defer ></script>
+</head>
+<body>
+  <main>
+    <section class="welcome">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Senac_logo.svg/2560px-Senac_logo.svg.png" width="400px" height="200px" alt="logo" class="logo">
+      <h1 class="main-txt">Bem-vindo ao cadastro do Senac</h1>
+    </section>
+    <div class="spacer layer1"></div>
+    <section class="form-container">
+      <form action="./action.php" method="post" class="form">
+        <label for="nome">Nome Completo:</label>
+        <input type="text" name="nome" id="nome" class="form-input" required>
+        <label for="rg">RG:</label>
+        <input type="text" name="rg" id="rg" class="form-input" required>
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="rg" class="form-input" required>
+        <label for="endereco">Endereço:</label>
+        <input type="text" name="endereco" class="form-input" required>
+        <label for="idade">Idade:</label>
+        <input type="number" name="idade" id="idade" class="form-input" required>
+        <label for="aniversario">Dia do aniversário:</label>
+        <input type="date" name="aniversario" id="aniversario" class="form-input" required>
+        <label for="season">Escolha sua estação favorita</label>
+        <label>
+          <input type="checkbox" name="season" value="Primavera" checked> Primavera
+        </label>
+        <label>
+            <input type="checkbox" name="season" value="Verão"> Verão
+        </label>
+        <label>
+            <input type="checkbox" name="season" value="Outono"> Outono
+        </label>
+        <label>
+            <input type="checkbox" name="season" value="Inverno"> Inverno
+        </label>
+        <label for="gender">Escolha o seu genêro:</label>
+        <label>
+          <input type="radio" name="gender" value="Masculino"> Masculino
+        </label>
+        <label>
+            <input type="radio" name="gender" value="Feminino"> Feminino
+        </label>
+        <label>
+            <input type="radio" name="gender" value="Outro" checked> Outro
+        </label>
+        <label for="color">Escolha sua cor favorita:</label>
+        <input type="color" name="color" id="color">
+        <label for="ocupacao">Escolha sua ocupação:</label>
+        <select name="ocupacao" id="ocupacao" class="form-input">
+          <option value="Desempregado">Desempregado</option>
+          <option value="Ederson">TI</option>
+        </select>
+        <label for="twitter">Twitter:</label>
+        <input type="text" id="twitter" name="twitter" class="form-input" required placeholder="Ex: @ederson">
+        <label for="instagram">Instagram:</label>
+        <input type="text" id="instagram" name="instagram" class="form-input" required placeholder="Ex: @ederson">
+        <label for="feedback">Feedback sobre o site:</label>
+        <input type="text" id="feedback" name="feedback" class="form-input" required>
+        <label for="profissao">Profissão:</label>
+        <input type="text" id="profissao" name="profissao" class="form-input" required>
+        <button type="submit" class="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

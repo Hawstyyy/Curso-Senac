@@ -1,6 +1,6 @@
 <?php
-  include('action.php');
-  include('verificacaoadmin.php');
+    include('verificacaoadmin.php');
+    include('count.php');
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +38,7 @@
             <section class="stats">
                 <div class="stat-card">
                     <h3>Usuários</h3>
-                    <p><?php echo count()?></p>
+                    <p><?php echo $count; ?></p>
                 </div>
                 <div class="stat-card">
                     <h3>Vendas</h3>

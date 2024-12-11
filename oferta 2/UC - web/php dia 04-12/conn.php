@@ -1,5 +1,5 @@
 <?php
-$host = '10.28.2.16';
+$host = 'localhost';
 $usuario = 'suporte';
 $senha = 'suporte';
 $db = 'banco139';

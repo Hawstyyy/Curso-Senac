@@ -6,7 +6,7 @@ $nome = mysqli_real_escape_string($con, $_POST['nome']);
 $senha = mysqli_real_escape_string($con, $_POST['password']);
 
 if (empty($nome) || empty($senha)) {
-  header('location: index.php');
+  header('location: ./index.php');
   exit();
 }
 
@@ -30,6 +30,6 @@ if ($row) {
 
 else {
   $_SESSION['erro'] = 'Erro, Verifique os campos e tente novamente';
-  header('location: index.php');
+  header('location: ./index.php');
   exit();
 }

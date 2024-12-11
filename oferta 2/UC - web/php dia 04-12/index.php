@@ -9,7 +9,7 @@
     <?php
     session_start();
     if (isset($_SESSION['erro'])) { ?>
-      <span class='erro'><?php echo $_SESSION['erro'];?></span>
+      <span class='erro'><?php echo $_SESSION['erro']; unset($_SESSION['erro']);?></span>
     <?php } 
     ?>
     <form action="action.php" method="post" class="forms">

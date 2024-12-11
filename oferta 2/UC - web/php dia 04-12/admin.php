@@ -12,22 +12,8 @@
     <link rel="stylesheet" href="admin.css">
 </head>
 <body>
+    <?php include('./sidebar.php') ?>
     <div class="container">
-        <!-- Barra Lateral -->
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <h2>Admin</h2>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Painel</a></li>
-                    <li><a href="#">Usuários</a></li>
-                    <li><a href="#">Configurações</a></li>
-                    <li><a href="#">Relatórios</a></li>
-                    <li><a href="./sair.php">Logout</a></li>
-                </ul>
-            </nav>
-        </aside>
 
         <!-- Conteúdo Principal -->
         <main class="main-content">

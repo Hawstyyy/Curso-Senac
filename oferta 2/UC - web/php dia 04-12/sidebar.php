@@ -1,10 +1,12 @@
-/* user.css */
+<!-- sidebar.php -->
+<style>
+  /* styles.css */
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
   min-height: 100vh;
-  background-color: #f4f4f4;
-  margin: 0;
 }
 
 /* Sidebar */
@@ -16,7 +18,6 @@ body {
   top: 0;
   left: 0;
   padding-top: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar ul {
@@ -37,43 +38,23 @@ body {
 
 .sidebar ul li a:hover {
   background-color: #575757;
+  color: #fff;
 }
 
-/* Main Content */
-.container {
+/* Conteúdo da página */
+.content {
   margin-left: 250px;
   padding: 20px;
-  width: 100%;
+  flex: 1;
 }
 
-h1 {
-  color: #333;
-}
 
-form {
-  margin-top: 20px;
-}
-
-form input {
-  margin-bottom: 10px;
-  padding: 8px;
-  width: 100%;
-  max-width: 400px;
-}
-
-form button {
-  padding: 10px 15px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #45a049;
-}
-
-.erro {
-  color: red;
-  font-weight: bold;
-}
+</style>
+<div class="sidebar">
+  <ul>
+    <li><a href="relatorio.php">Relatorio</a></li>
+    <li><a href="user.php">Cadastro usuario</a></li>
+    <li><a href="sair.php">Sair</a></li>
+    <!-- Adicione mais links conforme necessário -->
+  </ul>
+</div>

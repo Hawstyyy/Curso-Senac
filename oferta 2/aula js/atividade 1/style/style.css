@@ -1,0 +1,54 @@
+@import url(./root.css);
+
+#menu-header {
+  display: flex;
+  max-height: 80px;
+  background-color: #135944;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+#menu-header > #img-header > img {
+  max-height: 80px;
+}
+
+#menu-header > nav > ul {
+  display: flex;
+  gap: 15px;
+}
+
+#menu-header > nav > button {
+  display: none;
+}
+
+.item-menu > a {
+  color: #f3be8a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  padding: 8px 16px;
+}
+
+.item-menu > a:hover {
+  background-color: #2c7660;
+}
+
+@media (max-width: 768px) {
+  #menu-header {
+    position: relative;
+  }
+  #menu-header > nav > button {
+    display: block;
+  }
+  #menu-header > nav > ul {
+    display: none;
+  }
+  #menu-header > nav > ul.ativo {
+    display: flex;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    flex-direction: column;
+    background-color: #135944;
+  }
+}

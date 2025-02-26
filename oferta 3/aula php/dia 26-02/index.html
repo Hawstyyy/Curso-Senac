@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade dia 26/02</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form action="./action.php" method="post">
+      <label for="nome">Nome:</label>
+      <input required type="text" id="nome" name="nome" />
+
+      <label for="nascimento">Data de nascimento:</label>
+      <input required type="date" id="nascimento" name="nascimento" />
+
+      <label>Sexo:</label>
+      <div>
+        <input required type="radio" id="masculino" name="sexo" value="Masculino" />
+        <label for="masculino">Masculino</label>
+
+        <input required type="radio" id="feminino" name="sexo" value="Feminino" />
+        <label for="feminino">Feminino</label>
+      </div>
+
+      <label for="cpf">CPF:</label>
+      <input required type="text" id="cpf" name="cpf" />
+
+      <label for="rg">RG:</label>
+      <input required type="text" id="rg" name="rg" />
+
+      <label for="idade">Idade:</label>
+      <input required type="number" id="idade" name="idade" />
+
+      <label for="endereco">Endereço:</label>
+      <input required type="text" id="endereco" name="endereco" />
+
+      <label for="cidade">Cidade:</label>
+      <input required type="text" id="cidade" name="cidade" />
+
+      <label for="estado">Estado:</label>
+      <input required type="text" id="estado" name="estado" />
+
+      <label for="celular">Celular:</label>
+      <input required type="tel" id="celular" name="celular" />
+
+      <label for="email">E-mail:</label>
+      <input required type="email" name="email" id="email" />
+
+      <label for="senha">Senha:</label>
+      <input required type="password" name="senha" id="senha" />
+
+      <div>
+        <input required type="checkbox" id="termos" name="termos" />
+        <label for="termos">Li e aceito os termos</label>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>
